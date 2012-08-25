@@ -1,5 +1,5 @@
-o: ActiveSupport::Cache::Entry	:@expires_in0:@compressedF:@value"{"_version"%9f3b95dd7ea3030dc35985c0a8020862"required_assets_digest"%1a2dc79471515227aafd54563970d306"pathname"0$root/app/assets/javascripts/application.js"
-class"BundledAsset"logical_path"application.js"content_type"application/javascript"source"®/*!
+o: ActiveSupport::Cache::Entry	:@expires_in0:@compressedF:@value"({"
+mtime"2012-08-24T21:14:07-03:00"lengthi»"content_type"application/javascript"pathname"0$root/app/assets/javascripts/application.js"source"»/*!
  * jQuery JavaScript Library v1.7.2
  * http://jquery.com/
  *
@@ -9781,6 +9781,11 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
   });
 
 })( jQuery );
+(function() {
+
+
+
+}).call(this);
 // This is a manifest file that'll be compiled into application.js, which will include all the files
 // listed below.
 //
@@ -9797,5 +9802,5 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
 
 
 ;
-"
-mtime"2012-08-10T18:55:03-03:00"digest"%233a836f0997f02cdd898809992b29b2"lengthi®:@created_atf1344644118.2505939 	ª
+"digest"%a8ffa90fd23e160b29a9c897400b9729"_version"%9f3b95dd7ea3030dc35985c0a8020862"logical_path"application.js"required_assets_digest"%13c5986a259230cbe0732f666108c5ee"
+class"BundledAsset:@created_atf1345854178.8343239 eê
