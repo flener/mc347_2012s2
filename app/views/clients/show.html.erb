@@ -1,0 +1,85 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Cpf:</b>
+  <%= @client.cpf %>
+</p>
+
+<p>
+  <b>Nome:</b>
+  <%= @client.nome %>
+</p>
+
+<p>
+  <b>Rg:</b>
+  <%= @client.rg %>
+</p>
+
+<p>
+  <b>Nome pai:</b>
+  <%= @client.nome_pai %>
+</p>
+
+<p>
+  <b>Nome mae:</b>
+  <%= @client.nome_mae %>
+</p>
+
+<p>
+  <b>Data nascimento:</b>
+  <%= @client.data_nascimento %>
+</p>
+
+<p>
+  <b>Local nascimento:</b>
+  <%= @client.local_nascimento %>
+</p>
+
+<p>
+  <b>Quantidade filhos:</b>
+  <%= @client.quantidade_filhos %>
+</p>
+
+<p>
+  <b>Observacoes:</b>
+  <%= @client.observacoes %>
+</p>
+
+<p>
+  <b>Endereco:</b>
+  <%= @client.endereco_id %>
+</p>
+
+<p>
+  <b>Religiao:</b>
+  <%= @client.religiao_id %>
+</p>
+
+<p>
+  <b>Hobby:</b>
+  <%= @client.hobby_id %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @client.email_id %>
+</p>
+
+<p>
+  <b>Telefone:</b>
+  <%= @client.telefone_id %>
+</p>
+
+<p>
+  <b>Trabalho:</b>
+  <%= @client.trabalho_id %>
+</p>
+
+<p>
+  <b>Estado civil:</b>
+  <%= @client.estado_civil_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_client_path(@client) %> |
+<%= link_to 'Back', clients_path %>

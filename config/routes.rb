@@ -1,7 +1,14 @@
 Mc347Project::Application.routes.draw do
 
+  resources :clients
+
   authenticated :admin do
-    root :to => 'home#index'
+    root :to => 'clients#index'
+  end
+  root :to => "home#index"
+
+  authenticated :operador do
+    root :to => 'clients#index'
   end
   root :to => "home#index"
 

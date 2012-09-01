@@ -1,0 +1,57 @@
+<h1>Listing clients</h1>
+
+<table>
+  <tr>
+    <th>Cpf</th>
+    <th>Nome</th>
+    <th>Rg</th>
+    <th>Nome pai</th>
+    <th>Nome mae</th>
+    <th>Data nascimento</th>
+    <th>Local nascimento</th>
+    <th>Quantidade filhos</th>
+    <th>Observacoes</th>
+    <th>Endereco</th>
+    <th>Religiao</th>
+    <th>Hobby</th>
+    <th>Email</th>
+    <th>Telefone</th>
+    <th>Trabalho</th>
+    <th>Estado civil</th>
+    <th>Ativo</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @clients.each do |client| %>
+
+    <tr>
+      <td><%= client.cpf %></td>
+      <td><%= client.nome %></td>
+      <td><%= client.rg %></td>
+      <td><%= client.nome_pai %></td>
+      <td><%= client.nome_mae %></td>
+      <td><%= client.data_nascimento %></td>
+      <td><%= client.local_nascimento %></td>
+      <td><%= client.quantidade_filhos %></td>
+      <td><%= client.observacoes %></td>
+      <td><%= client.endereco_id %></td>
+      <td><%= client.religiao_id %></td>
+      <td><%= client.hobby_id %></td>
+      <td><%= client.email_id %></td>
+      <td><%= client.telefone_id %></td>
+      <td><%= client.trabalho_id %></td>
+      <td><%= client.estado_civil_id %></td>
+      <td><%= client.ativo %></td>
+      <td><%= link_to 'Show', client %></td>
+      <td><%= link_to 'Edit', edit_client_path(client) %></td>
+      <td><%= link_to 'Destroy', client, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+    </tr>
+
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Client', new_client_path %>
