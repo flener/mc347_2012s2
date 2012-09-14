@@ -2,4 +2,4 @@
 require File.expand_path('../application', __FILE__)
 
 # Initialize the rails application
-Mc347Project::Application.initialize!
+Scaffold::Application.initialize!

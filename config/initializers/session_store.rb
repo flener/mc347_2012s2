@@ -1,8 +1,8 @@
 # Be sure to restart your server when you modify this file.
 
-Mc347Project::Application.config.session_store :cookie_store, :key => '_mc347 project_session'
+Scaffold::Application.config.session_store :cookie_store, :key => '_scaffold_session'
 
 # Use the database for sessions instead of the cookie-based default,
 # which shouldn't be used to store highly confidential information
 # (create the session table with "rails generate session_migration")
-# Mc347Project::Application.config.session_store :active_record_store
+# Scaffold::Application.config.session_store :active_record_store

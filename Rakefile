@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Mc347Project::Application.load_tasks
+Scaffold::Application.load_tasks

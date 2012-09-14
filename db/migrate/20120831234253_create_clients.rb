@@ -17,6 +17,7 @@ class CreateClients < ActiveRecord::Migration
       t.integer :telefone_id
       t.integer :trabalho_id
       t.integer :estado_civil_id
+      t.integer :ativo
 
       t.timestamps
     end

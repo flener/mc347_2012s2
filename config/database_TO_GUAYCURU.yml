@@ -12,11 +12,12 @@ development:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: scaffold_development
+  database: guaycuru_tocha
   pool: 5
-  username: root
-  password:
+  username: guaycuru_tocha
+  password: ToChA123
   socket: /var/run/mysqld/mysqld.sock
+  host: guaycuru.net
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -25,18 +26,20 @@ test:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: scaffold_test
+  database: guaycuru_tocha
   pool: 5
-  username: root
-  password:
+  username: guaycuru_tocha
+  password: ToChA123
   socket: /var/run/mysqld/mysqld.sock
+  host: guaycuru.net
 
 production:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: scaffold_production
+  database: guaycuru_tocha
   pool: 5
-  username: root
-  password:
+  username: guaycuru_tocha
+  password: ToChA123
   socket: /var/run/mysqld/mysqld.sock
+  host: guaycuru.net
