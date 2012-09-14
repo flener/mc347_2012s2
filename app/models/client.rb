@@ -8,6 +8,6 @@ class Client < ActiveRecord::Base
   end
 
 
-  self.per_page = 2
+  self.per_page = 8
 
 end
