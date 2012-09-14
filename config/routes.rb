@@ -1,4 +1,4 @@
-Scaffold::Application.routes.draw do
+Mc437::Application.routes.draw do
 
   resources :clients
 
