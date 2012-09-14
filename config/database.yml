@@ -15,10 +15,11 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: mc437_development
+  database: d6pffft7o65tlm
   pool: 5
-  username: mc437
-  password: mc437
+  username: azlivldzahhnyd
+  password: nkjqhJFiii9sCOF-wO7KwTd18w
+  host: ec2-107-22-168-211.compute-1.amazonaws.com
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -41,15 +42,17 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: mc437_test
+  database: d6pffft7o65tlm
   pool: 5
-  username: mc437
-  password:
+  username: azlivldzahhnyd
+  password: nkjqhJFiii9sCOF-wO7KwTd18w
+  host: ec2-107-22-168-211.compute-1.amazonaws.com
 
 production:
   adapter: postgresql
   encoding: unicode
-  database: mc437_production
+  database: d6pffft7o65tlm
   pool: 5
-  username: mc437
-  password:
+  username: azlivldzahhnyd
+  password: nkjqhJFiii9sCOF-wO7KwTd18w
+  host: ec2-107-22-168-211.compute-1.amazonaws.com
