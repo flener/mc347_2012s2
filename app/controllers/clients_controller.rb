@@ -75,7 +75,7 @@ class ClientsController < ApplicationController
   def destroy
     @client = Client.find(params[:id])
     @client.ativo = false
-    @client.update_attributes(params[:client])
+    @client.save
     
     respond_to do |format|
       format.html { redirect_to clients_url }

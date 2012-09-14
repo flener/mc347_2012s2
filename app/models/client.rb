@@ -10,4 +10,8 @@ class Client < ActiveRecord::Base
 
   self.per_page = 8
 
+
+  # Validations
+  # http://guides.rubyonrails.org/active_record_validations_callbacks.html
+
 end
