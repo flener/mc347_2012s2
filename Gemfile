@@ -9,6 +9,8 @@ gem 'pg'
 gem 'devise'
 gem 'annotate', '2.5.0'
 gem 'json'
+gem 'sorted'
+gem 'will_paginate'
 
 # Gems used only for assets and not required
 # in production environments by default.
