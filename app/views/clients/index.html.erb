@@ -2,27 +2,31 @@
 
 
 <%= link_to 'Adicionar Cliente', new_client_path %>
+
+
 <br/>
 
-<table cellpadding="2" cellspacing="1">
+<div align="center">
+
+<table class="tabela" cellpadding="2" cellspacing="1">
   <tr>
-    <th> link_to_sorted "CPF", :cpf </th>
-    <th> link_to_sorted "Nome", :nome </th>
-    <th> link_to_sorted "RG", :rg </th>
-    <th> link_to_sorted "Nome pai", :nome_pai </th>
-    <th> link_to_sorted "Nome mae", :nome_mae </th>
-    <th> link_to_sorted "Data de Nascimento", :data_nascimento </th>
-    <th> link_to_sorted "Local de nascimento", :local_nascimento</th>
-    <th> link_to_sorted "Quantidade de filhos", :quantidade_filhos</th>
-    <th> link_to_sorted "Ativo", :ativo</th>
-    <th></th>
-    <th></th>
+    <th><%= link_to_sorted "CPF", :cpf %></th>
+    <th><%= link_to_sorted "Nome", :nome %></th>
+    <th><%= link_to_sorted "RG", :rg %></th>
+    <th><%= link_to_sorted "Nome pai", :nome_pai %></th>
+    <th><%= link_to_sorted "Nome mae", :nome_mae %></th>
+    <th><%= link_to_sorted "Data de Nascimento", :data_nascimento%> </th>
+    <th><%= link_to_sorted "Local de nascimento", :local_nascimento%></th>
+    <th><%= link_to_sorted "Quantidade de filhos", :quantidade_filhos%></th>
+    <th><%= link_to_sorted "Ativo", :ativo%></th>
+    <th>Editar</th>
+    <th>Deletar</th>
   </tr>
 
 <% @clients.each do |client| %>
 
     <tr>
-      <td><%= link_to client.cpf, client_path %></td>
+      <td><%= link_to client.cpf, client %></td>
       <td><%= client.nome %></td>
       <td><%= client.rg %></td>
       <td><%= client.nome_pai %></td>
@@ -40,3 +44,5 @@
 
 <br />
 
+  <%= will_paginate @clients %>
+</div>

@@ -7,4 +7,7 @@ class Client < ActiveRecord::Base
     self.ativo = true
   end
 
+
+  self.per_page = 2
+
 end

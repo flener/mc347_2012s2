@@ -3,6 +3,7 @@ class ClientsController < ApplicationController
   # GET /clients.json
   def index
     @clients = Client.all
+    @clients = Client.sorted(params[:sort], :cpf).page(params[:page])
 
     respond_to do |format|
       format.html # index.html.erb
