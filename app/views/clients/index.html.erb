@@ -1,4 +1,6 @@
-<h1>Lista de Clientes</h1>
+<div style="margin-left: 25px;">
+
+  <h1>Lista de Clientes</h1>
 
 
 <%= link_to 'Adicionar Cliente', new_client_path %>
@@ -14,7 +16,7 @@
     <th><%= link_to_sorted "Nome", :nome %></th>
     <th><%= link_to_sorted "RG", :rg %></th>
     <th><%= link_to_sorted "Nome pai", :nome_pai %></th>
-    <th><%= link_to_sorted "Nome mae", :nome_mae %></th>
+    <th><%= link_to_sorted "Nome mãe", :nome_mae %></th>
     <th><%= link_to_sorted "Data de Nascimento", :data_nascimento%> </th>
     <th><%= link_to_sorted "Local de nascimento", :local_nascimento%></th>
     <th><%= link_to_sorted "Quantidade de filhos", :quantidade_filhos%></th>
@@ -35,8 +37,8 @@
       <td><%= client.local_nascimento %></td>
       <td><%= client.quantidade_filhos %></td>
       <td><%= client.ativo %></td>
-      <td><%= link_to 'Edit', edit_client_path(client) %></td>
-      <td><%= link_to 'Destroy', client, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+      <td align="center"><%= link_to 'Editar', edit_client_path(client) %></td>
+      <td align="center"><%= link_to 'Deletar', client, :method => :delete, :data => { :confirm => 'Você tem certeza?' } %></td>
     </tr>
 <% end %>
 <% end %>
@@ -45,4 +47,4 @@
 <br />
 
   <%= will_paginate @clients %>
-</div>
+</div></div>

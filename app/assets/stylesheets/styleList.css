@@ -3,7 +3,7 @@
 
 .tabela {
 	position:relative;
-	width:850px;
+	width:1000px;
 	margin:10px 25px 0px 25px;
 	background-color:#E0E0E0;
 	font-size:10px;
@@ -13,6 +13,7 @@
 	background-image:url(/assets/images-sprites-x.png);
 	background-position:0px -30px;
 	padding:6px 2px;
+	font-size: 14px;
 }
 .tabela td {
 	background-color:#FFFFFF;
@@ -20,6 +21,7 @@
 	height:20px;
 	color:#333333;
 	width:auto;
+	font-size: 14px;
 }
 
 .tabela th a ins {

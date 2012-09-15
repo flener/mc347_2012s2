@@ -1,4 +1,6 @@
-<%= form_for(@client) do |f| %>
+<div style="margin-left: 25px;">
+
+  <%= form_for(@client) do |f| %>
   <% if @client.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@client.errors.count, "error") %> prohibited this client from being saved:</h2>
@@ -79,3 +81,4 @@
     <%= f.submit %>
   </div>
 <% end %>
+  </div>

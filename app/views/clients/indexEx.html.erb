@@ -1,4 +1,7 @@
-<h1>Lista de Clientes Excluidos</h1>
+<div style="margin-left: 25px;">
+  <h1>Lista de Clientes Excluidos</h1>
+
+<%= link_to 'Voltar', root_path %>
 
 
 <br/>
@@ -11,13 +14,12 @@
     <th><%= link_to_sorted "Nome", :nome %></th>
     <th><%= link_to_sorted "RG", :rg %></th>
     <th><%= link_to_sorted "Nome pai", :nome_pai %></th>
-    <th><%= link_to_sorted "Nome mae", :nome_mae %></th>
+    <th><%= link_to_sorted "Nome mãe", :nome_mae %></th>
     <th><%= link_to_sorted "Data de Nascimento", :data_nascimento%> </th>
     <th><%= link_to_sorted "Local de nascimento", :local_nascimento%></th>
     <th><%= link_to_sorted "Quantidade de filhos", :quantidade_filhos%></th>
     <th><%= link_to_sorted "Ativo", :ativo%></th>
-    <th>Editar</th>
-    <th>Deletar</th>
+    <th>Editar</th>>
   </tr>
 
 <% @clients.each do |client| %>
@@ -32,8 +34,8 @@
       <td><%= client.local_nascimento %></td>
       <td><%= client.quantidade_filhos %></td>
       <td><%= client.ativo %></td>
-      <td><%= link_to 'Edit', edit_client_path(client) %></td>
-      <td><%= link_to 'Destroy', client, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+      <td align="center"><%= link_to 'Editar', edit_client_path(client) %></td>
+
     </tr>
 <% end %>
 <% end %>
@@ -42,4 +44,4 @@
 <br />
 
   <%= will_paginate @clients %>
-</div>
+</div></div>
