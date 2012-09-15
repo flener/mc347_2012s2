@@ -18,6 +18,8 @@ Mc437::Application.routes.draw do
 
   resources :admins, :only => [:show, :index]
 
+  get "/clientsExcluidos" => "clients#indexEx"
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

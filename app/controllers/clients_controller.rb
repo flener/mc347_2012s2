@@ -11,6 +11,16 @@ class ClientsController < ApplicationController
     end
   end
 
+  def indexEx
+    @clients = Client.all
+    @clients = Client.sorted(params[:sort], :cpf).page(params[:page])
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => @clients }
+    end
+  end
+
   # GET /clients/1
   # GET /clients/1.json
   def show
@@ -27,6 +37,7 @@ class ClientsController < ApplicationController
   def new
     @client = Client.new
 
+
     respond_to do |format|
       format.html # new.html.erb
       format.json { render :json => @client }
@@ -42,6 +53,8 @@ class ClientsController < ApplicationController
   # POST /clients.json
   def create
     @client = Client.new(params[:client])
+    @client.ativo = true
+    @client.save
 
     respond_to do |format|
       if @client.save

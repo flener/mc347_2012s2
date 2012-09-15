@@ -1,7 +1,4 @@
-<h1>Lista de Clientes</h1>
-
-
-<%= link_to 'Adicionar Cliente', new_client_path %>
+<h1>Lista de Clientes Excluidos</h1>
 
 
 <br/>
@@ -24,7 +21,7 @@
   </tr>
 
 <% @clients.each do |client| %>
-<% if client.ativo == 1  %>
+<% if client.ativo == 0  %>
     <tr>
       <td><%= link_to client.cpf, client %></td>
       <td><%= client.nome %></td>
