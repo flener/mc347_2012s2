@@ -71,11 +71,15 @@
   </div>
   <div class="field">
     <%= f.label "Area de Trabalho" %><br />
-    <%= f.collection_select(:trabalho_area_id, TrabalhoArea.all, :id, :area, {:selected => 1}) %>
+    <%= f.collection_select(:trabalho_area_id, TrabalhoArea.all, :id, :area, {:selected => 3}) %>
+  </div>
+  <div class="field">
     <%= f.label "Cargo Atual" %><br />
-    <%= f.collection_select(:trabalho_cargo_id, TrabalhoCargo.all, :id, :cargo, {:selected => 1}) %>
+    <%= f.collection_select(:trabalho_cargo_id, TrabalhoCargo.all, :id, :cargo, {:selected => 9}) %>
+  </div>
+  <div class="field">
     <%= f.label "Renda Mensal" %><br />
-    <%= f.collection_select(:trabalho_renda_id, TrabalhoRenda.all, :id, :renda, {:selected => 1}) %>
+    <%= f.collection_select(:trabalho_renda_id, TrabalhoRenda.all, :id, :renda, {:selected => 7}) %>
   </div>
   <div class="field">
     <%= f.label :estado_civil_id %><br />
