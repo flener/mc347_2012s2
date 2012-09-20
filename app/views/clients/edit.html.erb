@@ -1,6 +1,15 @@
-<h1>Editing client</h1>
+<div style="margin-left: 25px;">
 
-<%= render 'form' %>
+    <h1>Editing client</h1>
 
-<%= link_to 'Show', @client %> |
-<%= link_to 'Back', clients_path %>
+    <%= render 'form' %>
+
+    <%= link_to 'Show', @client %> |
+    
+    <% if @client.ativo == 1 %>
+        <%= link_to 'Back', clients_path %>
+    <% else %>
+        <%= link_to 'Back', clientsExcluidos_path %>
+    <% end %>
+
+</div>
