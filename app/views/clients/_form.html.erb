@@ -55,11 +55,11 @@
   </div>
   <div class="field">
     <%= f.label 'Religião' %><br />
-    <%= f.collection_select :religiao, :religiao_id, Religiao.all, :id, :nome %>
+    <%= f.collection_select :client, :religiao_id, Religiao.all, :id, :nome %>
   </div>
   <div class="field">
     <%= f.label 'Hobby' %><br />
-    <%= f.collection_select :hobby, :hobby_id, Hobby.all, :id, :nome %>
+    <%= f.collection_select :client, :hobby_id, Hobby.all, :id, :nome %>
   </div>
   <div class="field">
     <%= f.label :email_id %><br />
