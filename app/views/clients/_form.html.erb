@@ -54,11 +54,11 @@
     <%= f.number_field :endereco_id %>
   </div>
   <div class="field">
-    <%= f.label 'Religião' %><br />
+    <%= f.label "Religiao" %><br />
     <%= f.collection_select(:religiao_id, Religiao.all, :id, :nome) %>
   </div>
   <div class="field">
-    <%= f.label 'Hobby' %><br />
+    <%= f.label "Hobby" %><br />
     <%= f.collection_select(:hobby_id, Hobby.all, :id, :nome) %>
   </div>
   <div class="field">
