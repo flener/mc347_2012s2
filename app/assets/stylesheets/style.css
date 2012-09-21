@@ -114,7 +114,25 @@ img { margin: 0px; padding: 0px; border: none; }
 }
 
 #menu li a:hover, #menu li .current {
-	color: #ffffff;
+	color: #fff;
+}
+
+#menu2 {
+	float: left;
+	display: block;
+	height: 20px;
+	padding: 12px 20px;
+	margin-right: 10px;
+	text-align: center;
+	font-size: 18px;
+	text-decoration: none;
+	color: #00CCFF;	
+	font-weight: bold;
+	outline: none;
+}
+
+#menu2 a:hover {
+	color: #900;
 }
 
 /* end of menu */

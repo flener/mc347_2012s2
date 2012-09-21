@@ -2,8 +2,9 @@
     <h1>Lista de Clientes Excluidos</h1>
 
   <br/>
-  <%= link_to 'Voltar', root_path %>
-
+  <div id="menu2">
+    <%= link_to 'Voltar', root_path %>
+  </div>
 
   <br/>
 
@@ -19,7 +20,6 @@
         <th><%= link_to_sorted "Data de Nascimento", :data_nascimento%> </th>
         <th><%= link_to_sorted "Local de nascimento", :local_nascimento%></th>
         <th><%= link_to_sorted "Quantidade de filhos", :quantidade_filhos%></th>
-        <th><%= link_to_sorted "Ativo", :ativo%></th>
         <th>Editar</th>>
       </tr>
 
@@ -33,14 +33,13 @@
         <td><%= client.data_nascimento %></td>
         <td><%= client.local_nascimento %></td>
         <td><%= client.quantidade_filhos %></td>
-        <td><%= client.ativo %></td>
         <td align="center"><%= link_to 'Editar', edit_client_path(client) %></td>
 
       </tr>
     <% end %>
     </table>
 
-    <br />
+    <br/>
 
     <%= will_paginate @clients %>
 

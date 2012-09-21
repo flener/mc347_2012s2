@@ -11,9 +11,50 @@
 
 </head>
 <body>
-<body bgcolor="#0D2D4B">
+<div id="wrapper_outter">
+  <div id="wrapper_inner">
+    <div id="wrapper">
+      <div id="container">
+        <div id="header">
+          <div id="header_left">
 
+            <div id="site_title" align = "left">
+              <h1><a href="#"> <img src="/assets/logo.png" alt=""/>  </a></h1>
+            </div>
+            <div id="menu">
+              <ul>
+                <li><a href="#" class="current">Home</a></li>
+                <li><a href="/clients">Ver Clientes</a></li>
+                <li><a href="/clientesExcluidos">Clientes Excluídos</a></li>
+              </ul>
+            </div>
+            <!-- end of menu -->
+          </div>
+          <!-- end of header left -->
+          <div class="cleaner"></div>
+        </div>
+        <!-- end of header -->
+
+              
 <%= yield %>
+
+
+
+          <!-- end of content_outer -->
+          <div id="template_sidebar">
+            
+          <div class="cleaner"></div>
+        </div>
+        <!-- end of content_wrapper -->
+        <div id="footer">
+          Copyright &copy; 2012 <a href="http://mc437.herokuapp.com/">Componente Cliente - MC437</a> | Desenvolvido por Alexandre Creto, Fernando Lener, Gregori Inagaki, Murilo Travareli e Piergiorgio Lisanti.</div>
+        <!-- end of footer -->
+        <div class="cleaner"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
 

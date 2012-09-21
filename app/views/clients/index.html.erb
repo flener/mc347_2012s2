@@ -1,18 +1,15 @@
-<div style="margin-left: 25px;">
+<div align="center" style="margin-left: 25px;">
 
   <h1>Lista de Clientes</h1>
 
   <br/>
-
-  <%= link_to 'Adicionar Cliente', new_client_path %>
-
-  <br/>
-
-  <%= link_to 'Relatórios', relatorios_path %>
-
-  <br/>
-  <%= link_to 'Voltar', root_path %>
-
+  <div id="menu2">
+      <%= link_to 'Adicionar Cliente', new_client_path %>
+      <%= link_to 'Relatórios', relatorios_path %>
+      <%= link_to 'Voltar', root_path %>
+  </div>
+  <!-- end of menu -->
+   <br/><br/>
   <br/>
 
   <div align="center">
@@ -27,7 +24,6 @@
         <th><%= link_to_sorted "Data de Nascimento", :data_nascimento%> </th>
         <th><%= link_to_sorted "Local de nascimento", :local_nascimento%></th>
         <th><%= link_to_sorted "Quantidade de filhos", :quantidade_filhos%></th>
-        <th><%= link_to_sorted "Ativo", :ativo%></th>
         <th>Editar</th>
         <th>Deletar</th>
       </tr>
@@ -42,7 +38,6 @@
         <td><%= client.data_nascimento %></td>
         <td><%= client.local_nascimento %></td>
         <td><%= client.quantidade_filhos %></td>
-        <td><%= client.ativo %></td>
         <td align="center"><%= link_to 'Editar', edit_client_path(client) %></td>
         <td align="center"><%= link_to 'Deletar', client, :method => :delete, :data => { :confirm => 'Você tem certeza?' } %></td>
       </tr>

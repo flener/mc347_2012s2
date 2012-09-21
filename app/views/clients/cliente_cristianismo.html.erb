@@ -20,7 +20,6 @@
     <th><%= link_to_sorted "Data de Nascimento", :data_nascimento%> </th>
     <th><%= link_to_sorted "Local de nascimento", :local_nascimento%></th>
     <th><%= link_to_sorted "Quantidade de filhos", :quantidade_filhos%></th>
-    <th><%= link_to_sorted "Ativo", :ativo%></th>
     <th>Editar</th>
     <th>Deletar</th>
   </tr>
@@ -37,7 +36,6 @@
           <td><%= client.data_nascimento %></td>
           <td><%= client.local_nascimento %></td>
           <td><%= client.quantidade_filhos %></td>
-          <td><%= client.ativo %></td>
           <td align="center"><%= link_to 'Editar', edit_client_path(client) %></td>
           <td align="center"><%= link_to 'Deletar', client, :method => :delete, :data => { :confirm => 'Você tem certeza?' } %></td>
         </tr>
