@@ -174,7 +174,7 @@ class ClientsController < ApplicationController
     end
   end
 
-  def cliente_cio
+  def cliente_cfo
     @clients = @clients = Client.where("(ativo) = 1")
 
     respond_to do |format|
@@ -201,7 +201,7 @@ class ClientsController < ApplicationController
     end
   end
 
-  def cliente_servicos
+  def cliente_servico
     @clients = @clients = Client.where("(ativo) = 1")
 
     respond_to do |format|
