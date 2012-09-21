@@ -7,6 +7,11 @@
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ['Área', 'Clientes'],
+          ['Work',     <%= TrabalhoArea.where("(area) = 'area'").count %>],
+          ['Eat',      12],
+          ['Commute',  2],
+          ['Watch TV', 2],
+          ['Sleep',    7],
           ['Financeira',     <%= TrabalhoArea.where("(area) = 'Financeira'").count %>],
           ['Comércio',      <%= TrabalhoArea.where("(area) = 'Comercio'").count %>],
           ['Contrutora',  <%= TrabalhoArea.where("(area) = 'Contrutora'").count %>],
@@ -30,6 +35,11 @@
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ['Cargos', 'Clientes'],
+          ['Work',     <%= TrabalhoCargo.where("(cargo) = 'cargo'").count %>],
+          ['Eat',      12],
+          ['Commute',  2],
+          ['Watch TV', 2],
+          ['Sleep',    7],
           ['Estagiário',     <%= TrabalhoCargo.where("(cargo) = 'Estagiario'").count %>],
           ['Pleno',      <%= TrabalhoCargo.where("(cargo) = 'Pleno'").count %>],
           ['Gerente',  <%= TrabalhoCargo.where("(cargo) = 'Gerente'").count %>],
@@ -57,7 +67,12 @@
       google.setOnLoadCallback(drawChart);
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Renda', 'Clientes'],
+          ['Cargos', 'Clientes'],
+          ['Work',     <%= TrabalhoRenda.where("(renda) = 'renda'").count %>],
+          ['Eat',      12],
+          ['Commute',  2],
+          ['Watch TV', 2],
+          ['Sleep',    7],
           ['Até 500 reais',     <%= TrabalhoRenda.where("(renda) = 'Ate 500 reais'").count %>],
           ['500 a 1000 reais',      <%= TrabalhoRenda.where("(renda) = '500 a 1000 reais'").count %>],
           ['1000 a 2000 reais',  <%= TrabalhoRenda.where("(renda) = '1000 a 2000 reais'").count %>],
@@ -83,7 +98,12 @@
       google.setOnLoadCallback(drawChart);
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Hobbies', 'Clientes'],
+          ['Cargos', 'Clientes'],
+          ['Work',     <%= Hobby.where("(nome) = 'hobby'").count %>],
+          ['Eat',      12],
+          ['Commute',  2],
+          ['Watch TV', 2],
+          ['Sleep',    7],
           ['Esportes',     <%= Hobby.where("(nome) = 'Esportes'").count %>],
           ['Games',      <%= Hobby.where("(nome) = 'Games'").count %>],
           ['Leitura',  <%= Hobby.where("(nome) = 'Leitura'").count %>],
@@ -108,7 +128,12 @@
       google.setOnLoadCallback(drawChart);
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Religiões', 'Clientes'],
+          ['Cargos', 'Clientes'],
+          ['Work',     <%= Religiao.where("(nome) = 'religiao'").count %>],
+          ['Eat',      12],
+          ['Commute',  2],
+          ['Watch TV', 2],
+          ['Sleep',    7],
           ['Cristianismo',     <%= Religiao.where("(nome) = 'Cristianismo'").count %>],
           ['Judaismo',      <%= Religiao.where("(nome) = 'Judaismo'").count %>],
           ['Islamismo',  <%= Religiao.where("(nome) = 'Islamismo'").count %>],
@@ -132,7 +157,12 @@
       google.setOnLoadCallback(drawChart);
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Quantidade de Filhos', 'Clientes'],
+          ['Cargos', 'Clientes'],
+          ['Work',     <%= Client.where("(quantidade_filhos) = 0").count %>],
+          ['Eat',      12],
+          ['Commute',  2],
+          ['Watch TV', 2],
+          ['Sleep',    7],
           ['Sem Filhos',     <%= Client.where("(quantidade_filhos) = 0").count %>],
           ['Um',      <%= Client.where("(quantidade_filhos) = 1").count %>],
           ['Dois',  <%= Client.where("(quantidade_filhos) = 2").count %>],
