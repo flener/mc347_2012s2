@@ -5,7 +5,7 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 12px;
 	color: #0d2d4b;
-    background: #73afd6 url(images/body.jpg) top repeat-x;
+    background: #73afd6 url(/assets/body.jpg) top repeat-x;
 }
 
 a:link, a:visited { color: #71950f; text-decoration: none; font-weight: normal;	} 
@@ -16,7 +16,7 @@ a:active, a:hover { color: #990000; text-decoration: underline;	}
 	width: 80px;
 	height: 21px;
 	padding: 3px 0 0 0;
-	background: url(images/button.png)  no-repeat;
+	background: url(/assets/button.png)  no-repeat;
 	color: #fff;
 	font-size: 12px;
 	font-weight: bold;
@@ -26,7 +26,7 @@ a:active, a:hover { color: #990000; text-decoration: underline;	}
 
 .button_01 a:hover {
 	color: #666;
-    background: url(images/button_hover.png) no-repeat;
+    background: url(/assets/button_hover.png) no-repeat;
 }
 
 p { font-size: 15px; margin: 0px; padding: 0px; }
@@ -45,25 +45,25 @@ img { margin: 0px; padding: 0px; border: none; }
 #wrapper_outter {
 	width: 100%;
 	margin: 0 auto;
-	background: url(images/body_top.jpg) top center no-repeat;
+	background: url(/assets/body_top.jpg) top center no-repeat;
 }
 
 #wrapper_inner {
 	width: 1000px;
 	margin: 0 auto;	
-	background: url(images/body_top.jpg) top center no-repeat;
+	background: url(/assets/body_top.jpg) top center no-repeat;
 }
 
 #wrapper {
 	width: 980px;
 	padding: 0 10px;
-	background: url(images/template_content.png) repeat-y center;
+	background: url(/assets/template_content.png) repeat-y center;
 }
 
 #container {
 	width: 980px;
 	padding: 30px 0;
-	background: url(images/content_top.jpg) top center no-repeat;
+	background: url(/assets/content_top.jpg) top center no-repeat;
 }
 
 #header {
@@ -81,7 +81,7 @@ img { margin: 0px; padding: 0px; border: none; }
 	clear: both;
 	width: 900px;	
 	height: 44px;
-	background: url(images/menu.png) no-repeat;
+	background: url(/assets/menu.png) no-repeat;
 	background-position: center;
 
 	padding: 75px 0px 75px 0px;
@@ -162,7 +162,7 @@ img { margin: 0px; padding: 0px; border: none; }
 	height: 154px;
 	padding: 15px 20px;
 	overflow: hidden;
-	background: url(images/login.png) no-repeat;	
+	background: url(/assets/login.png) no-repeat;	
 }
 
 #header #header_right h2 {
@@ -228,12 +228,12 @@ img { margin: 0px; padding: 0px; border: none; }
 	float: left;	
 	width: 930px;
 	padding: 30px 0 0 0;
-	background: url(images/main_content_top.png) no-repeat top center;
+	background: url(/assets/main_content_top.png) no-repeat top center;
 }
 
 #content {
 	padding: 0 40px 20px 40px;
-	background: url(images/main_content_middle.png) repeat-y center;
+	background: url(/assets/main_content_middle.png) repeat-y center;
 }
 
 #content h2 {
@@ -289,7 +289,7 @@ img { margin: 0px; padding: 0px; border: none; }
 	display: block;
 	width: 630px;
 	height: 5px;
-	background: url(images/main_content_bottom.png) no-repeat;
+	background: url(/assets/main_content_bottom.png) no-repeat;
 }
 /* end of content */
 
@@ -327,7 +327,7 @@ img { margin: 0px; padding: 0px; border: none; }
 	height: 140px;
 	padding: 10px;
 	margin-bottom: 8px;
-	background: url(images/image_frame_280x140.png);
+	background: url(/assets/image_frame_280x140.png);
 	background-repeat: no-repeat;
 }
 
