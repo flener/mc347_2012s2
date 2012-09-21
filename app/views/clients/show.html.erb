@@ -59,12 +59,12 @@
 
   <p>
     <b>Religiao:</b>
-    <%= @client.religiao.nome %>
+    <%= @client.religiao.nome unless @client.religiao.nil? %>
   </p>
 
   <p>
     <b>Hobby:</b>
-    <%= @client.hobby.nome %>
+    <%= @client.hobby.nome unless @client.hobby.nil? %>
   </p>
 
   <p>
