@@ -1,0 +1,209 @@
+<% content_for :charts do %>
+
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Área', 'Clientes'],
+          ['Work',     <%= TrabalhoArea.where("(area) = 'area'").count %>],
+          ['Eat',      12],
+          ['Commute',  2],
+          ['Watch TV', 2],
+          ['Sleep',    7],
+          ['Financeira',     <%= TrabalhoArea.where("(area) = 'Financeira'").count %>],
+          ['Comércio',      <%= TrabalhoArea.where("(area) = 'Comercio'").count %>],
+          ['Contrutora',  <%= TrabalhoArea.where("(area) = 'Contrutora'").count %>],
+          ['Serviços', <%= TrabalhoArea.where("(area) = 'Servicos'").count %>]
+        ]);
+
+        var options = {
+          title: 'Área de Trabalho',
+          backgroundColor: "#73AFD6"
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('area'));
+        chart.draw(data, options);
+      }
+    </script>
+
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Cargos', 'Clientes'],
+          ['Work',     <%= TrabalhoCargo.where("(cargo) = 'cargo'").count %>],
+          ['Eat',      12],
+          ['Commute',  2],
+          ['Watch TV', 2],
+          ['Sleep',    7],
+          ['Estagiário',     <%= TrabalhoCargo.where("(cargo) = 'Estagiario'").count %>],
+          ['Pleno',      <%= TrabalhoCargo.where("(cargo) = 'Pleno'").count %>],
+          ['Gerente',  <%= TrabalhoCargo.where("(cargo) = 'Gerente'").count %>],
+          ['Supervisor', <%= TrabalhoCargo.where("(cargo) = 'Supervisor'").count %>],
+          ['Diretor',    <%= TrabalhoCargo.where("(cargo) = 'Diretor'").count %>],
+          ['CEO', <%= TrabalhoCargo.where("(cargo) = 'CEO'").count %>],
+          ['CIO',    <%= TrabalhoCargo.where("(cargo) = 'CIO'").count %>],
+          ['CFO', <%= TrabalhoCargo.where("(cargo) = 'CFO'").count %>],
+          ['Desempregado',    <%= TrabalhoCargo.where("(cargo) = 'Desempregado'").count %>]
+        ]);
+
+        var options = {
+          title: 'Cargos',
+          backgroundColor: "#73AFD6"
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('cargos'));
+        chart.draw(data, options);
+      }
+    </script>
+
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Cargos', 'Clientes'],
+          ['Work',     <%= TrabalhoRenda.where("(renda) = 'renda'").count %>],
+          ['Eat',      12],
+          ['Commute',  2],
+          ['Watch TV', 2],
+          ['Sleep',    7],
+          ['Até 500 reais',     <%= TrabalhoRenda.where("(renda) = 'Ate 500 reais'").count %>],
+          ['500 a 1000 reais',      <%= TrabalhoRenda.where("(renda) = '500 a 1000 reais'").count %>],
+          ['1000 a 2000 reais',  <%= TrabalhoRenda.where("(renda) = '1000 a 2000 reais'").count %>],
+          ['2000 a 5000 reais', <%= TrabalhoRenda.where("(renda) = '2000 a 5000 reais'").count %>],
+          ['5000 a 10000',    <%= TrabalhoRenda.where("(renda) = '5000 a 10000'").count %>],
+          ['10000 ou mais reais', <%= TrabalhoRenda.where("(renda) = '10000 ou mais reais'").count %>],
+          ['Sem Renda',    <%= TrabalhoRenda.where("(renda) = 'Sem Renda'").count %>]
+        ]);
+
+        var options = {
+          title: 'Renda Mensal',
+          backgroundColor: "#73AFD6"
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('renda'));
+        chart.draw(data, options);
+      }
+    </script>
+
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Cargos', 'Clientes'],
+          ['Work',     <%= Hobby.where("(nome) = 'hobby'").count %>],
+          ['Eat',      12],
+          ['Commute',  2],
+          ['Watch TV', 2],
+          ['Sleep',    7],
+          ['Esportes',     <%= Hobby.where("(nome) = 'Esportes'").count %>],
+          ['Games',      <%= Hobby.where("(nome) = 'Games'").count %>],
+          ['Leitura',  <%= Hobby.where("(nome) = 'Leitura'").count %>],
+          ['Televisão', <%= Hobby.where("(nome) = 'Televisao'").count %>],
+          ['Compras',    <%= Hobby.where("(nome) = 'Compras'").count %>],
+          ['Sem Hobbies',    <%= Hobby.where("(nome) = 'Sem Hobbies'").count %>]
+        ]);
+
+        var options = {
+          title: 'Hobbies',
+          backgroundColor: "#73AFD6"
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('hobby'));
+        chart.draw(data, options);
+      }
+    </script>
+
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Cargos', 'Clientes'],
+          ['Work',     <%= Religiao.where("(nome) = 'religiao'").count %>],
+          ['Eat',      12],
+          ['Commute',  2],
+          ['Watch TV', 2],
+          ['Sleep',    7],
+          ['Cristianismo',     <%= Religiao.where("(nome) = 'Cristianismo'").count %>],
+          ['Judaismo',      <%= Religiao.where("(nome) = 'Judaismo'").count %>],
+          ['Islamismo',  <%= Religiao.where("(nome) = 'Islamismo'").count %>],
+          ['Espiritismo', <%= Religiao.where("(nome) = 'Espiritismo'").count %>],
+          ['Ateu',    <%= Religiao.where("(nome) = 'Ateu'").count %>]
+        ]);
+
+        var options = {
+          title: 'Religiões',
+          backgroundColor: "#73AFD6"
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('religiao'));
+        chart.draw(data, options);
+      }
+    </script>
+
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Cargos', 'Clientes'],
+          ['Work',     <%= Client.where("(quantidade_filhos) = 0").count %>],
+          ['Eat',      12],
+          ['Commute',  2],
+          ['Watch TV', 2],
+          ['Sleep',    7],
+          ['Sem Filhos',     <%= Client.where("(quantidade_filhos) = 0").count %>],
+          ['Um',      <%= Client.where("(quantidade_filhos) = 1").count %>],
+          ['Dois',  <%= Client.where("(quantidade_filhos) = 2").count %>],
+          ['Tres', <%= Client.where("(quantidade_filhos) = 3").count %>],
+          ['Quatro ou mais',    <%= Client.where("(quantidade_filhos) > 3").count %>]
+        ]);
+
+        var options = {
+          title: 'Quantidade de Filhos',
+          backgroundColor: "#73AFD6"
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('filhos'));
+        chart.draw(data, options);
+      }
+    </script>
+
+<% end %>
+
+<div style="margin-left: 25px;">
+  <h1> Relatórios dos Clientes </h1>
+  <br/>
+
+  <%= link_to 'Voltar', root_path %>
+
+<br/> <br/>
+</div>
+
+<div style="margin-left: 150px;">
+
+    <div id="area"></div>
+    <br/> <br/>
+    <div id="cargos"></div>
+    <br/> <br/>
+    <div id="renda"></div>
+    <br/> <br/>
+    <div id="hobby"></div>
+    <br/> <br/>
+    <div id="religiao"></div>
+    <br/> <br/>
+    <div id="filhos"></div>
+    <br/> <br/>
+
+  </div>

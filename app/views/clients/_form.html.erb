@@ -1,0 +1,92 @@
+<div style="margin-left: 25px;">
+
+  <%= form_for(@client) do |f| %>
+  <% if @client.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@client.errors.count, "error") %> prohibited this client from being saved:</h2>
+
+      <ul>
+      <% @client.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cpf %><br />
+    <%= f.text_field :cpf %>
+  </div>
+  <div class="field">
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :rg %><br />
+    <%= f.text_field :rg %>
+  </div>
+  <div class="field">
+    <%= f.label :nome_pai %><br />
+    <%= f.text_field :nome_pai %>
+  </div>
+  <div class="field">
+    <%= f.label :nome_mae %><br />
+    <%= f.text_field :nome_mae %>
+  </div>
+  <div class="field">
+    <%= f.label "Data de Nascimento" %><br />
+    <%= f.date_select :data_nascimento %>
+  </div>
+  <div class="field">
+    <%= f.label "Local de Nascimento" %><br />
+    <%= f.text_field :local_nascimento %>
+  </div>
+  <div class="field">
+    <%= f.label "Email" %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label "Telefone" %><br />
+    <%= f.text_field :telefone %>
+  </div>
+  <div class="field">
+    <%= f.label "Quantidade de Filhos" %><br />
+    <%= f.number_field :quantidade_filhos %>
+  </div>
+  <div class="field">
+    <%= f.label "Código de Endereco" %><br />
+    <%= f.number_field :endereco_id %>
+  </div>
+  <div class="field">
+    <%= f.label "Religiao" %><br />
+    <%= f.collection_select(:religiao_id, Religiao.all, :id, :nome, {:selected => 5}) %>
+  </div>
+  <div class="field">
+    <%= f.label "Hobby" %><br />
+    <%= f.collection_select(:hobby_id, Hobby.all, :id, :nome, {:selected => 5}) %>
+  </div>
+  <div class="field">
+    <%= f.label "Área de Trabalho" %><br />
+    <%= f.collection_select(:trabalho_area_id, TrabalhoArea.all, :id, :area, {:selected => 3}) %>
+  </div>
+  <div class="field">
+    <%= f.label "Cargo Atual" %><br />
+    <%= f.collection_select(:trabalho_cargo_id, TrabalhoCargo.all, :id, :cargo, {:selected => 9}) %>
+  </div>
+  <div class="field">
+    <%= f.label "Renda Mensal" %><br />
+    <%= f.collection_select(:trabalho_renda_id, TrabalhoRenda.all, :id, :renda, {:selected => 7}) %>
+  </div>
+  <div class="field">
+    <%= f.label "Código de Estado Civil" %><br />
+    <%= f.number_field :estado_civil_id %>
+  </div>
+  <div class="field">
+    <%= f.label :observacoes %><br />
+    <%= f.text_area :observacoes %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  <% end %>
+</div>

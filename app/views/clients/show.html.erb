@@ -1,0 +1,103 @@
+<div style="margin-left: 25px;">
+<br/>
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <b>Cpf:</b>
+    <%= @client.cpf %>
+  </p>
+
+  <p>
+    <b>Nome:</b>
+    <%= @client.nome %>
+  </p>
+
+  <p>
+    <b>Rg:</b>
+    <%= @client.rg %>
+  </p>
+
+  <p>
+    <b>Nome pai:</b>
+    <%= @client.nome_pai %>
+  </p>
+
+  <p>
+    <b>Nome mae:</b>
+    <%= @client.nome_mae %>
+  </p>
+
+  <p>
+    <b>Data nascimento:</b>
+    <%= @client.data_nascimento.strftime("%d/%m/%Y") %>
+  </p>
+
+  <p>
+    <b>Local nascimento:</b>
+    <%= @client.local_nascimento %>
+  </p>
+
+  <p>
+    <b>Email:</b>
+    <%= @client.email %>
+  </p>
+
+  <p>
+    <b>Telefone:</b>
+    <%= @client.telefone %>
+  </p>
+
+  <p>
+    <b>Quantidade filhos:</b>
+    <%= @client.quantidade_filhos %>
+  </p>
+
+  <p>
+    <b>Endereco:</b>
+    <%= @client.endereco_id %>
+  </p>
+
+  <p>
+    <b>Religiao:</b>
+    <%= @client.religiao.nome unless @client.religiao.nil? %>
+  </p>
+
+  <p>
+    <b>Hobby:</b>
+    <%= @client.hobby.nome unless @client.hobby.nil? %>
+  </p>
+
+  <p>
+    <b>Area de Trabalho:</b>
+    <%= @client.trabalho_area.area unless @client.trabalho_area.nil? %>
+  </p>
+  
+  <p>
+    <b>Cargo de Trabalho:</b>
+    <%= @client.trabalho_cargo.cargo unless @client.trabalho_cargo.nil? %>
+  </p>
+
+  <p>
+    <b>Renda Mensal:</b>
+    <%= @client.trabalho_renda.renda  unless @client.trabalho_renda.nil? %>
+  </p>
+
+  <p>
+    <b>Estado civil:</b>
+    <%= @client.estado_civil_id %>
+  </p>
+
+  <p>
+    <b>Observacoes:</b>
+    <%= @client.observacoes %>
+  </p>
+
+
+  <%= link_to 'Edit', edit_client_path(@client) %> |
+    <% if @client.ativo == 1 %>
+        <%= link_to 'Back', clients_path %>
+    <% else %>
+        <%= link_to 'Back', clientesExcluidos_path %>
+    <% end %>
+
+</div>
