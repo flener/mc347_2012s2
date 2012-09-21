@@ -84,7 +84,12 @@ class ClientsController < ApplicationController
   # DELETE /clients/1.json
   def destroy
     @client = Client.find(params[:id])
-    @client.ativo = false
+    if @client.ativo == false
+      @client.ativo = true
+    else
+      @client.ativo = false
+    end
+    
     @client.save
     
     respond_to do |format|
