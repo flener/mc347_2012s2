@@ -14,8 +14,8 @@
 #
 
 class Endereco < ActiveRecord::Base
-  attr_accessible :bairro, :cep, :cidade, :cliente_cpf, :estado, :rua
+  attr_accessible :bairro, :cep, :cidade, :estado, :rua
 
-  belongs_to :cliente_cpf
+  has_many :cliente_cpf
 
 end

@@ -11,6 +11,6 @@
 class Religiao < ActiveRecord::Base
   attr_accessible :nome
 
-  has_many :clients
+  has_many :cliente_cpf
 
 end

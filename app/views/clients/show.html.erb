@@ -1,5 +1,5 @@
 <div style="margin-left: 25px;">
-
+<br/>
   <p id="notice"><%= notice %></p>
 
   <p>
@@ -29,7 +29,7 @@
 
   <p>
     <b>Data nascimento:</b>
-    <%= @client.data_nascimento %>
+    <%= @client.data_nascimento.strftime("%d/%m/%Y") %>
   </p>
 
   <p>
@@ -38,13 +38,18 @@
   </p>
 
   <p>
-    <b>Quantidade filhos:</b>
-    <%= @client.quantidade_filhos %>
+    <b>Email:</b>
+    <%= @client.email %>
   </p>
 
   <p>
-    <b>Observacoes:</b>
-    <%= @client.observacoes %>
+    <b>Telefone:</b>
+    <%= @client.telefone %>
+  </p>
+
+  <p>
+    <b>Quantidade filhos:</b>
+    <%= @client.quantidade_filhos %>
   </p>
 
   <p>
@@ -63,18 +68,18 @@
   </p>
 
   <p>
-    <b>Email:</b>
-    <%= @client.email_id %>
+    <b>Area de Trabalho:</b>
+    <%= @client.trabalho_area.area unless @client.trabalho_area.nil? %>
+  </p>
+  
+  <p>
+    <b>Cargo de Trabalho:</b>
+    <%= @client.trabalho_cargo.cargo unless @client.trabalho_cargo.nil? %>
   </p>
 
   <p>
-    <b>Telefone:</b>
-    <%= @client.telefone_id %>
-  </p>
-
-  <p>
-    <b>Trabalho:</b>
-    <%= @client.trabalho_id %>
+    <b>Renda Mensal:</b>
+    <%= @client.trabalho_renda.renda  unless @client.trabalho_renda.nil? %>
   </p>
 
   <p>
@@ -82,12 +87,17 @@
     <%= @client.estado_civil_id %>
   </p>
 
+  <p>
+    <b>Observacoes:</b>
+    <%= @client.observacoes %>
+  </p>
+
 
   <%= link_to 'Edit', edit_client_path(@client) %> |
     <% if @client.ativo == 1 %>
         <%= link_to 'Back', clients_path %>
     <% else %>
-        <%= link_to 'Back', clientsExcluidos_path %>
+        <%= link_to 'Back', clientesExcluidos_path %>
     <% end %>
 
 </div>

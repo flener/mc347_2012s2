@@ -2,8 +2,7 @@ class ClientsController < ApplicationController
   # GET /clients
   # GET /clients.json
   def index
-    @clients = Client.all
-    @clients = Client.sorted(params[:sort], :cpf).page(params[:page])
+    @clients = @clients = Client.where("(ativo) = 1").page(params[:page])
 
     respond_to do |format|
       format.html # index.html.erb
@@ -12,9 +11,7 @@ class ClientsController < ApplicationController
   end
 
   def indexEx
-    @clients = Client.all
-    @clients = Client.sorted(params[:sort], :cpf).page(params[:page])
-
+    @clients = Client.where("(ativo) = 0").sorted(params[:sort], :cpf).page(params[:page])
     respond_to do |format|
       format.html # index.html.erb
       format.json { render :json => @clients }
@@ -93,6 +90,294 @@ class ClientsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to clients_url }
       format.json { head :no_content }
+    end
+  end
+
+  def cliente_estagiario
+    @clients = @clients = Client.where("(ativo) = 1")
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => @clients }
+    end
+  end
+
+  def cliente_financeiro
+    @clients = @clients = Client.where("(ativo) = 1")
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => @clients }
+    end
+  end
+
+  def relatorios
+    @clients = @clients = Client.where("(ativo) = 1")
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => @clients }
+    end
+  end
+
+  def cliente_pleno
+    @clients = @clients = Client.where("(ativo) = 1")
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => @clients }
+    end
+  end
+
+  def cliente_gerente
+    @clients = @clients = Client.where("(ativo) = 1")
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => @clients }
+    end
+  end
+
+  def cliente_supervisor
+    @clients = @clients = Client.where("(ativo) = 1")
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => @clients }
+    end
+  end
+
+  def cliente_diretor
+    @clients = @clients = Client.where("(ativo) = 1")
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => @clients }
+    end
+  end
+
+  def cliente_ceo
+    @clients = @clients = Client.where("(ativo) = 1")
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => @clients }
+    end
+  end
+
+  def cliente_cio
+    @clients = @clients = Client.where("(ativo) = 1")
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => @clients }
+    end
+  end
+
+  def cliente_cio
+    @clients = @clients = Client.where("(ativo) = 1")
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => @clients }
+    end
+  end
+
+  def cliente_desempregado
+    @clients = @clients = Client.where("(ativo) = 1")
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => @clients }
+    end
+  end
+
+  def cliente_comercio
+    @clients = @clients = Client.where("(ativo) = 1")
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => @clients }
+    end
+  end
+
+  def cliente_servicos
+    @clients = @clients = Client.where("(ativo) = 1")
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => @clients }
+    end
+  end
+
+  def cliente_construtora
+    @clients = @clients = Client.where("(ativo) = 1")
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => @clients }
+    end
+  end
+
+  def cliente_cristianismo
+    @clients = @clients = Client.where("(ativo) = 1")
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => @clients }
+    end
+  end
+
+  def cliente_islamismo
+    @clients = @clients = Client.where("(ativo) = 1")
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => @clients }
+    end
+  end
+
+  def cliente_judaismo
+    @clients = @clients = Client.where("(ativo) = 1")
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => @clients }
+    end
+  end
+
+  def cliente_ateu
+    @clients = @clients = Client.where("(ativo) = 1")
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => @clients }
+    end
+  end
+
+  def cliente_espiritismo
+    @clients = @clients = Client.where("(ativo) = 1")
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => @clients }
+    end
+  end
+
+  def cliente_esportes
+    @clients = @clients = Client.where("(ativo) = 1")
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => @clients }
+    end
+  end
+
+  def cliente_games
+    @clients = @clients = Client.where("(ativo) = 1")
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => @clients }
+    end
+  end
+
+  def cliente_televisao
+    @clients = @clients = Client.where("(ativo) = 1")
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => @clients }
+    end
+  end
+
+  def cliente_leitura
+    @clients = @clients = Client.where("(ativo) = 1")
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => @clients }
+    end
+  end
+
+  def cliente_compras
+    @clients = @clients = Client.where("(ativo) = 1")
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => @clients }
+    end
+  end
+
+  def cliente_sem_hobbies
+    @clients = @clients = Client.where("(ativo) = 1")
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => @clients }
+    end
+  end
+
+  def cliente_renda1
+    @clients = @clients = Client.where("(ativo) = 1")
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => @clients }
+    end
+  end
+
+  def cliente_renda2
+    @clients = @clients = Client.where("(ativo) = 1")
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => @clients }
+    end
+  end
+
+  def cliente_renda3
+    @clients = @clients = Client.where("(ativo) = 1")
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => @clients }
+    end
+  end
+
+  def cliente_renda4
+    @clients = @clients = Client.where("(ativo) = 1")
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => @clients }
+    end
+  end
+
+  def cliente_renda5
+    @clients = @clients = Client.where("(ativo) = 1")
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => @clients }
+    end
+  end
+
+  def cliente_renda6
+    @clients = @clients = Client.where("(ativo) = 1")
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => @clients }
+    end
+  end
+
+  def cliente_renda7
+    @clients = @clients = Client.where("(ativo) = 1")
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => @clients }
     end
   end
 end

@@ -12,6 +12,6 @@
 class Email < ActiveRecord::Base
   attr_accessible :cliente_cpf, :endereco
 
-  belongs_to :cliente_cpf
+  has_many :cliente_cpf
 
 end

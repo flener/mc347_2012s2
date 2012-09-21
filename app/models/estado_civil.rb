@@ -12,6 +12,6 @@
 class EstadoCivil < ActiveRecord::Base
   attr_accessible :cliente_cpf, :cpf_conjuge
 
-  belongs_to :cliente_cpf
+  has_many :cliente_cpf
 
 end

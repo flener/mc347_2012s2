@@ -1,0 +1,51 @@
+<div style="margin-left: 25px;">
+
+  <h1>Lista de Clientes Estagiários</h1>
+
+<br/>
+<%= link_to 'Adicionar Cliente', new_client_path %><br/>
+<%= link_to 'Voltar', root_path %>
+
+<br/>
+
+<div align="center">
+
+<table class="tabela" cellpadding="2" cellspacing="1">
+  <tr>
+    <th><%= link_to_sorted "CPF", :cpf %></th>
+    <th><%= link_to_sorted "Nome", :nome %></th>
+    <th><%= link_to_sorted "RG", :rg %></th>
+    <th><%= link_to_sorted "Nome pai", :nome_pai %></th>
+    <th><%= link_to_sorted "Nome mãe", :nome_mae %></th>
+    <th><%= link_to_sorted "Data de Nascimento", :data_nascimento%> </th>
+    <th><%= link_to_sorted "Local de nascimento", :local_nascimento%></th>
+    <th><%= link_to_sorted "Quantidade de filhos", :quantidade_filhos%></th>
+    <th><%= link_to_sorted "Ativo", :ativo%></th>
+    <th>Editar</th>
+    <th>Deletar</th>
+  </tr>
+
+<% unless Hobby.first.blank? %>
+  <% @clients.each do |client| %>
+    <% if client.hobby.nome == "Sem Hobbies" %>
+        <tr>
+          <td><%= link_to client.cpf, client %></td>
+          <td><%= client.nome %></td>
+          <td><%= client.rg %></td>
+          <td><%= client.nome_pai %></td>
+          <td><%= client.nome_mae %></td>
+          <td><%= client.data_nascimento %></td>
+          <td><%= client.local_nascimento %></td>
+          <td><%= client.quantidade_filhos %></td>
+          <td><%= client.ativo %></td>
+          <td align="center"><%= link_to 'Editar', edit_client_path(client) %></td>
+          <td align="center"><%= link_to 'Deletar', client, :method => :delete, :data => { :confirm => 'Você tem certeza?' } %></td>
+        </tr>
+    <% end %>
+  <% end %>
+<% end %>
+</table>
+
+<br />
+
+</div></div>

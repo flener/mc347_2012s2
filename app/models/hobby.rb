@@ -11,6 +11,6 @@
 class Hobby < ActiveRecord::Base
   attr_accessible :nome
 
-  belongs_to :cliente_cpf
+  has_many :cliente_cpf
 
 end

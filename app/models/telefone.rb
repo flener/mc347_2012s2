@@ -12,6 +12,6 @@
 class Telefone < ActiveRecord::Base
   attr_accessible :cliente_cpf, :numero
 
-  belongs_to :cliente
+  has_many :cliente_cpf
 
 end

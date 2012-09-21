@@ -34,23 +34,27 @@
     <%= f.text_field :nome_mae %>
   </div>
   <div class="field">
-    <%= f.label :data_nascimento %><br />
+    <%= f.label "Data de Nascimento" %><br />
     <%= f.date_select :data_nascimento %>
   </div>
   <div class="field">
-    <%= f.label :local_nascimento %><br />
+    <%= f.label "Local de Nascimento" %><br />
     <%= f.text_field :local_nascimento %>
   </div>
   <div class="field">
-    <%= f.label :quantidade_filhos %><br />
+    <%= f.label "Email" %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label "Telefone" %><br />
+    <%= f.text_field :telefone %>
+  </div>
+  <div class="field">
+    <%= f.label "Quantidade de Filhos" %><br />
     <%= f.number_field :quantidade_filhos %>
   </div>
   <div class="field">
-    <%= f.label :observacoes %><br />
-    <%= f.text_area :observacoes %>
-  </div>
-  <div class="field">
-    <%= f.label :endereco_id %><br />
+    <%= f.label "Código de Endereco" %><br />
     <%= f.number_field :endereco_id %>
   </div>
   <div class="field">
@@ -62,15 +66,7 @@
     <%= f.collection_select(:hobby_id, Hobby.all, :id, :nome, {:selected => 5}) %>
   </div>
   <div class="field">
-    <%= f.label :email_id %><br />
-    <%= f.number_field :email_id %>
-  </div>
-  <div class="field">
-    <%= f.label :telefone_id %><br />
-    <%= f.number_field :telefone_id %>
-  </div>
-  <div class="field">
-    <%= f.label "Area de Trabalho" %><br />
+    <%= f.label "Área de Trabalho" %><br />
     <%= f.collection_select(:trabalho_area_id, TrabalhoArea.all, :id, :area, {:selected => 3}) %>
   </div>
   <div class="field">
@@ -82,8 +78,12 @@
     <%= f.collection_select(:trabalho_renda_id, TrabalhoRenda.all, :id, :renda, {:selected => 7}) %>
   </div>
   <div class="field">
-    <%= f.label :estado_civil_id %><br />
+    <%= f.label "Código de Estado Civil" %><br />
     <%= f.number_field :estado_civil_id %>
+  </div>
+  <div class="field">
+    <%= f.label :observacoes %><br />
+    <%= f.text_area :observacoes %>
   </div>
   <div class="actions">
     <%= f.submit %>

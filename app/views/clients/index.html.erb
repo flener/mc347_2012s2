@@ -2,49 +2,136 @@
 
   <h1>Lista de Clientes</h1>
 
+  <br/>
 
-<%= link_to 'Adicionar Cliente', new_client_path %>
-<%= link_to 'Voltar', root_path %>
+  <%= link_to 'Adicionar Cliente', new_client_path %>
 
-<br/>
+  <br/>
 
-<div align="center">
+  <%= link_to 'Relatórios', relatorios_path %>
 
-<table class="tabela" cellpadding="2" cellspacing="1">
-  <tr>
-    <th><%= link_to_sorted "CPF", :cpf %></th>
-    <th><%= link_to_sorted "Nome", :nome %></th>
-    <th><%= link_to_sorted "RG", :rg %></th>
-    <th><%= link_to_sorted "Nome pai", :nome_pai %></th>
-    <th><%= link_to_sorted "Nome mãe", :nome_mae %></th>
-    <th><%= link_to_sorted "Data de Nascimento", :data_nascimento%> </th>
-    <th><%= link_to_sorted "Local de nascimento", :local_nascimento%></th>
-    <th><%= link_to_sorted "Quantidade de filhos", :quantidade_filhos%></th>
-    <th><%= link_to_sorted "Ativo", :ativo%></th>
-    <th>Editar</th>
-    <th>Deletar</th>
-  </tr>
+  <br/>
+  <%= link_to 'Voltar', root_path %>
 
-<% @clients.each do |client| %>
-<% if client.ativo == 1  %>
-    <tr>
-      <td><%= link_to client.cpf, client %></td>
-      <td><%= client.nome %></td>
-      <td><%= client.rg %></td>
-      <td><%= client.nome_pai %></td>
-      <td><%= client.nome_mae %></td>
-      <td><%= client.data_nascimento %></td>
-      <td><%= client.local_nascimento %></td>
-      <td><%= client.quantidade_filhos %></td>
-      <td><%= client.ativo %></td>
-      <td align="center"><%= link_to 'Editar', edit_client_path(client) %></td>
-      <td align="center"><%= link_to 'Deletar', client, :method => :delete, :data => { :confirm => 'Você tem certeza?' } %></td>
-    </tr>
-<% end %>
-<% end %>
-</table>
+  <br/>
 
-<br />
+  <div align="center">
 
-  <%= will_paginate @clients %>
-</div></div>
+    <table class="tabela" cellpadding="2" cellspacing="1">
+      <tr>
+        <th><%= link_to_sorted "CPF", :cpf %></th>
+        <th><%= link_to_sorted "Nome", :nome %></th>
+        <th><%= link_to_sorted "RG", :rg %></th>
+        <th><%= link_to_sorted "Nome pai", :nome_pai %></th>
+        <th><%= link_to_sorted "Nome mãe", :nome_mae %></th>
+        <th><%= link_to_sorted "Data de Nascimento", :data_nascimento%> </th>
+        <th><%= link_to_sorted "Local de nascimento", :local_nascimento%></th>
+        <th><%= link_to_sorted "Quantidade de filhos", :quantidade_filhos%></th>
+        <th><%= link_to_sorted "Ativo", :ativo%></th>
+        <th>Editar</th>
+        <th>Deletar</th>
+      </tr>
+
+    <% @clients.each do |client| %>
+      <tr>
+        <td><%= link_to client.cpf, client %></td>
+        <td><%= client.nome %></td>
+        <td><%= client.rg %></td>
+        <td><%= client.nome_pai %></td>
+        <td><%= client.nome_mae %></td>
+        <td><%= client.data_nascimento %></td>
+        <td><%= client.local_nascimento %></td>
+        <td><%= client.quantidade_filhos %></td>
+        <td><%= client.ativo %></td>
+        <td align="center"><%= link_to 'Editar', edit_client_path(client) %></td>
+        <td align="center"><%= link_to 'Deletar', client, :method => :delete, :data => { :confirm => 'Você tem certeza?' } %></td>
+      </tr>
+    <% end %>
+    </table>
+
+    <br />
+
+      <%= will_paginate @clients %>
+
+    <br />
+    <br />
+
+
+    <table class="tabela" cellpadding="2" cellspacing="1">
+      <h1>Filtros</h1>
+      <tr>
+        <th>Área de Trabalho</th>
+        <th>Cargo</th>
+        <th>Renda Mensal</th>
+        <th>Hobbies</th>
+        <th>Religião</th>
+      </tr>
+
+      <tr>
+        <td align="center"> <%= link_to "Financeiro", clientesFinanceiros_path %> </td>
+        <td align="center"> <%= link_to "Estagiário", clientesEstagiarios_path %> </td>
+        <td align="center"> <%= link_to "Até 500 reais", clientesRenda1_path %> </td>
+        <td align="center"> <%= link_to "Esportes", clientesEsportes_path %> </td>
+        <td align="center"> <%= link_to "Cristianismo", clientesCristianismo_path %> </td>
+      </tr>
+
+      <tr>
+        <td align="center"> <%= link_to "Comércio", clientesComercios_path %> </td>
+        <td align="center"> <%= link_to "Pleno", clientesPlenos_path %> </td>
+        <td align="center"> <%= link_to "500 a 1000 reais", clientesRenda2_path %> </td>
+        <td align="center"> <%= link_to "Games", clientesGames_path %> </td>
+        <td align="center"> <%= link_to "Islamismo", clientesIslamismo_path %> </td>
+      </tr>
+
+      <tr>
+        <td align="center"> <%= link_to "Serviços", clientesServicos_path %> </td>
+        <td align="center"> <%= link_to "Gerente", clientesGerentes_path %> </td>
+        <td align="center"> <%= link_to "1000 a 2000 reais", clientesRenda3_path %> </td>
+        <td align="center"> <%= link_to "Leitura", clientesLeitura_path %> </td>
+        <td align="center"> <%= link_to "Judaismo", clientesJudaismo_path %> </td>
+      </tr>
+
+      <tr>
+        <td align="center"> <%= link_to "Construtora", clientesConstrutoras_path %> </td>
+        <td align="center"> <%= link_to "Diretor", clientesDiretores_path %> </td>
+        <td align="center"> <%= link_to "2000 a 5000 reais", clientesRenda4_path %> </td>
+        <td align="center"> <%= link_to "Televisão", clientesTelevisao_path %> </td>
+        <td align="center"> <%= link_to "Espiritismo", clientesEspiritismo_path %> </td>
+      </tr>
+
+      <tr>
+        <td align="center"> </td>
+        <td align="center"> <%= link_to "CEO", clientesCEOs_path %> </td>
+        <td align="center"> <%= link_to "5000 a 10000 reais", clientesRenda5_path %> </td>
+        <td align="center"> <%= link_to "Compras", clientesCompras_path %> </td>
+        <td align="center"> <%= link_to "Ateu", clientesAteu_path %> </td>
+      </tr>
+
+      <tr>
+        <td align="center"> </td>
+        <td align="center"> <%= link_to "CFO", clientesCFOs_path %> </td>
+        <td align="center"> <%= link_to "10000 ou mais reais", clientesRenda6_path %> </td>
+        <td align="center"> <%= link_to "Sem Hobbies", clientesSemHobbies_path %> </td>
+        <td align="center"> </td>
+      </tr>
+
+      <tr>
+        <td align="center"> </td>
+        <td align="center"> <%= link_to "CIO", clientesCIOs_path %> </td>
+        <td align="center"> <%= link_to "Sem Renda", clientesRenda7_path %> </td>
+        <td align="center"> </td>
+        <td align="center"> </td>
+      </tr>
+
+      <tr>
+        <td align="center"> </td>
+        <td align="center"> <%= link_to "Desempregado", clientesDesempregados_path %> </td>
+        <td align="center"> </td>
+        <td align="center"> </td>
+        <td align="center"> </td>
+      </tr>
+    </table>
+
+
+  </div>
+</div>
