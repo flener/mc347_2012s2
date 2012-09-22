@@ -21,6 +21,7 @@
         <th><%= link_to_sorted "Local de nascimento", :local_nascimento%></th>
         <th><%= link_to_sorted "Quantidade de filhos", :quantidade_filhos%></th>
         <th>Editar</th>>
+        <th>Restaurar</th>>
       </tr>
 
     <% @clients.each do |client| %>
@@ -34,7 +35,7 @@
         <td><%= client.local_nascimento %></td>
         <td><%= client.quantidade_filhos %></td>
         <td align="center"><%= link_to 'Editar', edit_client_path(client) %></td>
-
+        <td align="center"><%= link_to 'Restaurar', client, :method => :delete, :data => { :confirm => 'Você tem certeza?' } %></td>
       </tr>
     <% end %>
     </table>

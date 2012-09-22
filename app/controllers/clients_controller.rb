@@ -91,7 +91,7 @@ class ClientsController < ApplicationController
     end
     
     @client.save
-    
+
     respond_to do |format|
       format.html { redirect_to clients_url }
       format.json { head :no_content }
@@ -206,7 +206,7 @@ class ClientsController < ApplicationController
     end
   end
 
-  def cliente_servico
+  def cliente_servicos
     @clients = @clients = Client.where("(ativo) = 1")
 
     respond_to do |format|

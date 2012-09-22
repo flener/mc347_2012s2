@@ -30,7 +30,7 @@ Mc437::Application.routes.draw do
   get "/clientesFinanceiros" => "clients#cliente_financeiro"
   get "/clientesConstrutoras" => "clients#cliente_construtora"
   get "/clientesComercios" => "clients#cliente_comercio"
-  get "/clientesServicos" => "clients#cliente_servico"
+  get "/clientesServicos" => "clients#cliente_servicos"
   get "/clientesDesempregados" => "clients#cliente_desempregado"
   get "/clientesRenda1" => "clients#cliente_renda1"
   get "/clientesRenda2" => "clients#cliente_renda2"
