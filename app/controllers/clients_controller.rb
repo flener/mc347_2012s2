@@ -106,7 +106,7 @@ class ClientsController < ApplicationController
     @client.save
 
     respond_to do |format|
-      format.html { redirect_to clients_url }
+      format.html { redirect_to clientesExcluidos_url }
       format.json { head :no_content }
     end
   end
