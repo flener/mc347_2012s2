@@ -7,10 +7,10 @@
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ['Área', 'Clientes'],
-          ['Financeira',     <%= Client.where(trabalho_area_id => '4').count %>],
-          ['Comércio',      <%= Client.where(trabalho_area_id => '2').count %>],
-          ['Contrutora',  <%= Client.where(trabalho_area_id => '3').count %>],
-          ['Serviços', <%= Client.where(trabalho_area_id => '1').count %>]
+          ['Financeira',     <%= Client.where(:trabalho_area_id => '4').count %>],
+          ['Comércio',       <%= Client.where(:trabalho_area_id => '2').count %>],
+          ['Contrutora',     <%= Client.where(:trabalho_area_id => '3').count %>],
+          ['Serviços',       <%= Client.where(:trabalho_area_id => '1').count %>]
         ]);
 
         var options = {
@@ -29,15 +29,15 @@
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ['Cargos', 'Clientes'],
-          ['Estagiário',     <%= TrabalhoCargo.where("(cargo) = 'Estagiario'").count %>],
-          ['Pleno',      <%= TrabalhoCargo.where("(cargo) = 'Pleno'").count %>],
-          ['Gerente',  <%= TrabalhoCargo.where("(cargo) = 'Gerente'").count %>],
-          ['Supervisor', <%= TrabalhoCargo.where("(cargo) = 'Supervisor'").count %>],
-          ['Diretor',    <%= TrabalhoCargo.where("(cargo) = 'Diretor'").count %>],
-          ['CEO', <%= TrabalhoCargo.where("(cargo) = 'CEO'").count %>],
-          ['CIO',    <%= TrabalhoCargo.where("(cargo) = 'CIO'").count %>],
-          ['CFO', <%= TrabalhoCargo.where("(cargo) = 'CFO'").count %>],
-          ['Desempregado',    <%= TrabalhoCargo.where("(cargo) = 'Desempregado'").count %>]
+          ['Estagiário',     <%= Client.where(:trabalho_cargo_id => '1').count %>],
+          ['Pleno',      <%= Client.where(:trabalho_cargo_id => '2').count %>],
+          ['Gerente',  <%= Client.where(:trabalho_cargo_id => '4').count %>],
+          ['Supervisor', <%= Client.where(:trabalho_cargo_id => '3').count %>],
+          ['Diretor',    <%= Client.where(:trabalho_cargo_id => '5').count %>],
+          ['CEO', <%= Client.where(:trabalho_cargo_id => '6').count %>],
+          ['CIO',    <%= Client.where(:trabalho_cargo_id => '7').count %>],
+          ['CFO', <%= Client.where(:trabalho_cargo_id => '8').count %>],
+          ['Desempregado',    <%= Client.where(:trabalho_cargo_id => '9').count %>]
         ]);
 
         var options = {
@@ -55,14 +55,14 @@
       google.setOnLoadCallback(drawChart);
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Cargos', 'Clientes'],
-          ['Até 500 reais',     <%= TrabalhoRenda.where("(renda) = 'Ate 500 reais'").count %>],
-          ['500 a 1000 reais',      <%= TrabalhoRenda.where("(renda) = '500 a 1000 reais'").count %>],
-          ['1000 a 2000 reais',  <%= TrabalhoRenda.where("(renda) = '1000 a 2000 reais'").count %>],
-          ['2000 a 5000 reais', <%= TrabalhoRenda.where("(renda) = '2000 a 5000 reais'").count %>],
-          ['5000 a 10000',    <%= TrabalhoRenda.where("(renda) = '5000 a 10000'").count %>],
-          ['10000 ou mais reais', <%= TrabalhoRenda.where("(renda) = '10000 ou mais reais'").count %>],
-          ['Sem Renda',    <%= TrabalhoRenda.where("(renda) = 'Sem Renda'").count %>]
+          ['Renda', 'Clientes'],
+          ['Até 500 reais',     <%= Client.where(:trabalho_renda_id => '2').count %>],
+          ['500 a 1000 reais',      <%= Client.where(:trabalho_renda_id => '3').count %>],
+          ['1000 a 2000 reais',  <%= Client.where(:trabalho_renda_id => '4').count %>],
+          ['2000 a 5000 reais', <%= Client.where(:trabalho_renda_id => '5').count %>],
+          ['5000 a 10000',    <%= Client.where(:trabalho_renda_id => '6').count %>],
+          ['10000 ou mais reais', <%= Client.where(:trabalho_renda_id => '7').count %>],
+          ['Sem Renda',    <%= Client.where(:trabalho_renda_id => '8').count %>]
         ]);
 
         var options = {
@@ -80,13 +80,13 @@
       google.setOnLoadCallback(drawChart);
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Cargos', 'Clientes'],
-          ['Esportes',     <%= Hobby.where("(nome) = 'Esportes'").count %>],
-          ['Games',      <%= Hobby.where("(nome) = 'Games'").count %>],
-          ['Leitura',  <%= Hobby.where("(nome) = 'Leitura'").count %>],
-          ['Televisão', <%= Hobby.where("(nome) = 'Televisao'").count %>],
-          ['Compras',    <%= Hobby.where("(nome) = 'Compras'").count %>],
-          ['Sem Hobbies',    <%= Hobby.where("(nome) = 'Sem Hobbies'").count %>]
+          ['Hobbies', 'Clientes'],
+          ['Esportes',     <%= Client.where(:hobby_id => '1').count %>],
+          ['Games',      <%= Client.where(:hobby_id => '3').count %>],
+          ['Leitura',  <%= Client.where(:hobby_id => '4').count %>],
+          ['Televisão', <%= Client.where(:hobby_id => '5').count %>],
+          ['Compras',    <%= Client.where(:hobby_id => '2').count %>],
+          ['Sem Hobbies',    <%= Client.where(:hobby_id => '6').count %>]
         ]);
 
         var options = {
@@ -104,12 +104,12 @@
       google.setOnLoadCallback(drawChart);
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Cargos', 'Clientes'],
-          ['Cristianismo',     <%= Religiao.where("(nome) = 'Cristianismo'").count %>],
-          ['Judaismo',      <%= Religiao.where("(nome) = 'Judaismo'").count %>],
-          ['Islamismo',  <%= Religiao.where("(nome) = 'Islamismo'").count %>],
-          ['Espiritismo', <%= Religiao.where("(nome) = 'Espiritismo'").count %>],
-          ['Ateu',    <%= Religiao.where("(nome) = 'Ateu'").count %>]
+          ['Religiao', 'Clientes'],
+          ['Cristianismo',     <%= Client.where(:religiao_id => '1').count %>],
+          ['Judaismo',      <%= Client.where(:religiao_id => '3').count %>],
+          ['Islamismo',  <%= Client.where(:religiao_id => '2').count %>],
+          ['Espiritismo', <%= Client.where(:religiao_id => '4').count %>],
+          ['Ateu',    <%= Client.where(:religiao_id => '5').count %>]
         ]);
 
         var options = {
@@ -127,12 +127,12 @@
       google.setOnLoadCallback(drawChart);
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Cargos', 'Clientes'],
-          ['Sem Filhos',     <%= Client.where("(quantidade_filhos) = 0").count %>],
-          ['Um',      <%= Client.where("(quantidade_filhos) = 1").count %>],
-          ['Dois',  <%= Client.where("(quantidade_filhos) = 2").count %>],
-          ['Tres', <%= Client.where("(quantidade_filhos) = 3").count %>],
-          ['Quatro ou mais',    <%= Client.where("(quantidade_filhos) > 3").count %>]
+          ['Quantidade de Filhos', 'Clientes'],
+          ['Sem Filhos',     <%= Client.where(:quantidade_filhos => '0').count %>],
+          ['Um',      <%= Client.where(:quantidade_filhos => '1').count %>],
+          ['Dois',  <%= Client.where(:quantidade_filhos => '2').count %>],
+          ['Tres', <%= Client.where(:quantidade_filhos => '3').count %>],
+          ['Quatro ou mais',    <%= Client.where(:quantidade_filhos => '>=4').count %>]
         ]);
 
         var options = {
