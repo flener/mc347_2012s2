@@ -48,7 +48,7 @@ class ClientsController < ApplicationController
 
   # POST /clients
   # POST /clients.json
-  def create
+  def create 
     @client = Client.new(params[:client])
     @client.ativo = true
     @client.save

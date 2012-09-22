@@ -46,7 +46,7 @@ Mc437::Application.routes.draw do
   get "/clientesSemHobbies" => "clients#cliente_sem_hobbies"
   get "/clientesCompras" => "clients#cliente_compras"
   get "/clientesCristianismo" => "clients#cliente_cristianismo"
-  get "/clientesJudaismo" => "clients#cliente_judaismo"
+  get "/clientesJudaismo" => "clients#cliente_judaismo" 
   get "/clientesIslamismo" => "clients#cliente_islamismo"
   get "/clientesEspiritismo" => "clients#cliente_espiritismo"
   get "/clientesAteu" => "clients#cliente_ateu"
