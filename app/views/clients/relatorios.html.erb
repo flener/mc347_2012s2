@@ -7,10 +7,10 @@
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ['Área', 'Clientes'],
-          ['Financeira',     <%= TrabalhoArea.where("(area) = 'Financeira'").count %>],
-          ['Comércio',      <%= TrabalhoArea.where("(area) = 'Comercio'").count %>],
-          ['Contrutora',  <%= TrabalhoArea.where("(area) = 'Contrutora'").count %>],
-          ['Serviços', <%= TrabalhoArea.where("(area) = 'Servicos'").count %>]
+          ['Financeira',     <%= Client.where(trabalho_area_id => '4').count %>],
+          ['Comércio',      <%= Client.where(trabalho_area_id => '2').count %>],
+          ['Contrutora',  <%= Client.where(trabalho_area_id => '3').count %>],
+          ['Serviços', <%= Client.where(trabalho_area_id => '1').count %>]
         ]);
 
         var options = {
