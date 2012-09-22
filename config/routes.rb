@@ -51,7 +51,7 @@ Mc437::Application.routes.draw do
   get "/clientesEspiritismo" => "clients#cliente_espiritismo"
   get "/clientesAteu" => "clients#cliente_ateu"
   get "/relatorios" => "clients#relatorios"
-  get "/restore" => "clients#restore"
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

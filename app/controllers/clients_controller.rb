@@ -97,19 +97,6 @@ class ClientsController < ApplicationController
       format.json { head :no_content }
     end
   end
-  
-  def restore
-    @client = Client.find(params[:id])
-
-    @client.ativo = true
-
-    @client.save
-
-    respond_to do |format|
-      format.html { redirect_to clientesExcluidos_url }
-      format.json { head :no_content }
-    end
-  end
 
   def cliente_estagiario
     @clients = @clients = Client.where("(ativo) = 1")
