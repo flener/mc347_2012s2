@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120901000712) do
+ActiveRecord::Schema.define(:version => 20120920222730) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -43,20 +43,15 @@ ActiveRecord::Schema.define(:version => 20120901000712) do
     t.integer  "endereco_id"
     t.integer  "religiao_id"
     t.integer  "hobby_id"
-    t.integer  "email_id"
-    t.integer  "telefone_id"
-    t.integer  "trabalho_id"
     t.integer  "estado_civil_id"
     t.integer  "ativo"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
-  end
-
-  create_table "emails", :force => true do |t|
-    t.text     "endereco"
-    t.string   "cliente_cpf"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.string   "trabalho_renda_id"
+    t.string   "trabalho_cargo_id"
+    t.string   "trabalho_area_id"
+    t.string   "email"
+    t.string   "telefone"
   end
 
   create_table "enderecos", :force => true do |t|
@@ -107,20 +102,16 @@ ActiveRecord::Schema.define(:version => 20120901000712) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "telefones", :force => true do |t|
-    t.string   "numero"
-    t.string   "cliente_cpf"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+  create_table "trabalho_areas", :force => true do |t|
+    t.string "area"
   end
 
-  create_table "trabalhos", :force => true do |t|
-    t.string   "area_trabalho"
-    t.string   "cargo"
-    t.integer  "rendimento"
-    t.string   "cliente_cpf"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+  create_table "trabalho_cargos", :force => true do |t|
+    t.string "cargo"
+  end
+
+  create_table "trabalho_rendas", :force => true do |t|
+    t.string "renda"
   end
 
 end
