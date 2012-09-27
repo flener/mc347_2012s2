@@ -20,6 +20,23 @@
       <div id="container">
 
 
+
+        <div align="right">
+          <% if admin_signed_in? %>
+            <div>Seja bem vindo, ADMIN</div>
+            <%= button_to 'Sign out', destroy_admin_session_path, :method => :delete %>
+          <% end %>
+        </div>
+
+        <div align="right">
+          <% if operador_signed_in? %>
+            <div>Seja bem vindo, OPERADOR</div>
+            <%= button_to 'Sign out', destroy_operador_session_path, :method => :delete %>
+          <% end %>
+        </div>
+
+
+
         <div id="header">
           <div id="header_left">
 
@@ -31,6 +48,22 @@
 
                 <li><a href="#" class="current">Home</a></li>
 
+                <% if admin_signed_in? %>
+                  <li><a href="/clients">Ver Clientes</a></li>
+                  <li><a href="/clientesExcluidos">Clientes Excluídos</a></li>
+                <% else %>
+                  <% unless operador_signed_in? %>
+                    <li><a href="/admins/sign_in">Admin Login</a></li>
+                  <% end %>
+                <% end %>
+
+                <% if operador_signed_in? %>
+                  <li><a href="/clients">Ver Clientes</a></li>
+                <% else %>
+                  <% unless admin_signed_in? %>
+                    <li><a href="/operadors/sign_in">Operador Login</a></li>
+                  <% end %>
+                <% end %>
 
                 <li><a href="quemsomos.html">Quem somos</a></li>
 

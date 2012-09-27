@@ -1,53 +1,6 @@
 class ClientsController < ApplicationController
   
-  def search
-    @client = Client.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render :json => @client }
-    end
-  end
   
-  def add_item row_name, value
-    if value == nil || value.size == 0
-      return ""
-    else
-      return " and " + row_name + " = '" + value+ "'" 
-    end
-  end
-  
-  def add_like_item row_name, value
-    if value == nil || value.size == 0
-      return ""
-    else
-      return " and " + row_name + " like '%" + value+ "%'" 
-    end
-  end
-  
-  def searchResult
-    @client = Client.new(params[:client])
-    
-    query = "(ativo) = 1"
-    query+= add_item "cpf" , @client.cpf
-    query+= add_like_item "nome" , @client.nome
-    query+= add_item "rg" , @client.rg
-    query+= add_like_item "nome_pai" , @client.nome_pai
-    query+= add_like_item "nome_mae" , @client.nome_mae
-    #query+= add_item "data_nascimento", @client.data_nascimento
-    query+= add_like_item "local_nascimento" , @client.local_nascimento
-    query+= add_item "email", @client.email
-    query+= add_item "telefone", @client.telefone
-    query+= add_item "quantidade_filhos", @client.quantidade_filhos
-    query+= add_item "endereco_id", @client.endereco_id
-    query+= add_item "religiao_id", @client.religiao_id
-    query+= add_item "hobby_id", @client.hobby_id
-    query+= add_item "trabalho_area_id", @client.trabalho_area_id
-    query+= add_item "trabalho_cargo_id", @client.trabalho_cargo_id
-    query+= add_item "trabalho_renda_id", @client.trabalho_renda_id
-    
-    @clients = Client.where(query).page(params[:page])
-  end
   
   # GET /clients
   # GET /clients.json
