@@ -13,6 +13,13 @@
 <body>
 
 
+<div id="wrapper_outter">
+  <div id="wrapper_inner">
+    <div id="wrapper">
+      <div id="container">
+
+
+
         <div align="right" style=" margin-right: 25px; ">
           <% if admin_signed_in? %>
             <div>Seja bem vindo, ADMIN</div>
@@ -26,13 +33,6 @@
         </div>
 
 
-
-<div id="wrapper_outter">
-  <div id="wrapper_inner">
-    <div id="wrapper">
-      <div id="container">
-
-
         <div id="header">
           <div id="header_left">
 
@@ -44,6 +44,22 @@
 
                 <li><a href="#" class="current">Home</a></li>
 
+                <% if admin_signed_in? %>
+                  <li><a href="/clients">Ver Clientes</a></li>
+                  <li><a href="/clientesExcluidos">Clientes Excluídos</a></li>
+                <% else %>
+                  <% unless operador_signed_in? %>
+                    <li><a href="/admins/sign_in">Admin Login</a></li>
+                  <% end %>
+                <% end %>
+
+                <% if operador_signed_in? %>
+                  <li><a href="/clients">Ver Clientes</a></li>
+                <% else %>
+                  <% unless admin_signed_in? %>
+                    <li><a href="/operadors/sign_in">Operador Login</a></li>
+                  <% end %>
+                <% end %>
 
                 <li><a href="quemsomos.html">Quem somos</a></li>
 
