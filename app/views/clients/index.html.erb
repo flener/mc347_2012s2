@@ -38,7 +38,7 @@
         <td><%= client.nome_mae %></td>
         <td><%= client.data_nascimento %></td>
         <td><%= client.local_nascimento %></td>
-        <td><%= client.quantidade_filhos %></td>
+        <td align="center"><%= client.quantidade_filhos %></td>
         <td align="center"><%= link_to 'Editar', edit_client_path(client) %></td>
         <td align="center"><%= link_to 'Deletar', client, :method => :delete, :data => { :confirm => 'Você tem certeza?' } %></td>
       </tr>

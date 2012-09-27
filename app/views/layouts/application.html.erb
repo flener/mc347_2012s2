@@ -13,11 +13,26 @@
 <body>
 
 
-
 <div id="wrapper_outter">
   <div id="wrapper_inner">
     <div id="wrapper">
       <div id="container">
+
+
+
+        <div align="right" style=" margin-right: 25px; ">
+          <% if admin_signed_in? %>
+            <div>Seja bem vindo, ADMIN</div>
+            <%= button_to 'Sair', destroy_admin_session_path, :method => :delete %>
+          <% end %>
+
+          <% if operador_signed_in? %>
+            <div>Seja bem vindo, OPERADOR</div>
+            <%= button_to 'Sair', destroy_operador_session_path, :method => :delete %>
+          <% end %>
+        </div>
+
+
         <div id="header">
           <div id="header_left">
 
@@ -26,12 +41,28 @@
             </div>
             <div id="menu">
               <ul>
+
                 <li><a href="#" class="current">Home</a></li>
-    <li><a href="/clients">Ver Clientes</a></li>
-    <li><a href="/clientesExcluidos">Clientes Excluídos</a></li>
-    <li><a href="/admins/sign_in">Admin Login</a></li> 
-    <li><a href="/operadors/sign_in">Operador Login</a></li>
+
+                <% if admin_signed_in? %>
+                  <li><a href="/clients">Ver Clientes</a></li>
+                  <li><a href="/clientesExcluidos">Clientes ExcluÃ­dos</a></li>
+                <% else %>
+                  <% unless operador_signed_in? %>
+                    <li><a href="/admins/sign_in">Admin Login</a></li>
+                  <% end %>
+                <% end %>
+
+                <% if operador_signed_in? %>
+                  <li><a href="/clients">Ver Clientes</a></li>
+                <% else %>
+                  <% unless admin_signed_in? %>
+                    <li><a href="/operadors/sign_in">Operador Login</a></li>
+                  <% end %>
+                <% end %>
+
                 <li><a href="quemsomos.html">Quem somos</a></li>
+
               </ul>
             </div>
             <!-- end of menu -->

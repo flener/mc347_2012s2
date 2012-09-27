@@ -3,12 +3,12 @@ Mc437::Application.routes.draw do
   resources :clients
 
   authenticated :admin do
-    root :to => 'clients#index'
+    root :to => 'home#index'
   end
   root :to => "home#index"
 
   authenticated :operador do
-    root :to => 'clients#index'
+    root :to => 'home#index'
   end
   root :to => "home#index"
 
