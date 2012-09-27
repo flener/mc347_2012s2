@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 class Client < ActiveRecord::Base
   attr_accessible :cpf, :data_nascimento, :email, :endereco_id, :estado_civil_id, :hobby_id, 
   :local_nascimento, :nome, :nome_mae, :nome_pai, :observacoes, :quantidade_filhos, :religiao_id, 
@@ -33,7 +35,7 @@ class Client < ActiveRecord::Base
   
   def telefone_validation
     if telefone.size == 0 || (/([0-9]{10,11})/=~telefone)==nil
-      errors.add(:telefone, "Telefone inválido")
+      errors.add(:telefone, ": Telefone inválido")
       return false
     end
     
@@ -42,7 +44,7 @@ class Client < ActiveRecord::Base
   
   def email_validation
     if email.size == 0 || (/\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/ =~ email) == nil
-      errors.add(:email , "Email invalido")
+      errors.add(:email , ": Email invalido")
       return false
     end
     return true
