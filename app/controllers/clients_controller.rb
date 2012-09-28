@@ -1,6 +1,14 @@
 class ClientsController < ApplicationController
   
-  before_filter :authenticate_operador!
+  before_filter :login
+
+  def login
+    if admin_signed_in? || operador_signed_in?
+      return
+    else
+      redirect_to new_operador_session_path
+    end
+  end
 
   def search
     @client = Client.new
