@@ -49,12 +49,12 @@ class ClientsController < ApplicationController
     query+= add_item "email", @client.email
     query+= add_item "telefone", @client.telefone
     query+= add_item "quantidade_filhos", @client.quantidade_filhos
-    query+= add_item "endereco_id", @client.endereco_id
-    query+= add_item "religiao_id", @client.religiao_id
-    query+= add_item "hobby_id", @client.hobby_id
-    query+= add_item "trabalho_area_id", @client.trabalho_area_id
-    query+= add_item "trabalho_cargo_id", @client.trabalho_cargo_id
-    query+= add_item "trabalho_renda_id", @client.trabalho_renda_id
+    query+= add_item "endereco_id", @client.endereco_id.to_s
+    query+= add_item "religiao_id", @client.religiao_id.to_s
+    query+= add_item "hobby_id", @client.hobby_id.to_s
+    query+= add_item "trabalho_area_id", @client.trabalho_area_id.to_s
+    query+= add_item "trabalho_cargo_id", @client.trabalho_cargo_id.to_s
+    query+= add_item "trabalho_renda_id", @client.trabalho_renda_id.to_s
     
     @clients = Client.where(query).page(params[:page])
   end

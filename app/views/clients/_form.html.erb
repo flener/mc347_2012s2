@@ -1,4 +1,12 @@
-<div style="margin-left: 25px;">
+<div id="content_wrapper">
+          <div id="content_outer">
+            <div id="content">
+		 <!-- FORM: BODY SECTION -->
+<div class="wFormContainer">
+<h2> Formulário de Cadastro</h2><br/>
+<fieldset id="fsCadastro">
+<legend>Informe seus dados pessoais</legend>
+
 
   <%= form_for(@client) do |f| %>
   <% if @client.errors.any? %>
@@ -54,6 +62,10 @@
     <%= f.number_field :quantidade_filhos %>
   </div>
   <div class="field">
+    <%= f.label "Código de Endereco" %><br />
+    <%= f.number_field :endereco_id %>
+  </div>
+  <div class="field">
     <%= f.label "Religiao" %><br />
     <%= f.collection_select(:religiao_id, Religiao.all, :id, :nome, {:selected => 5}) %>
   </div>
@@ -85,4 +97,42 @@
     <%= f.submit %>
   </div>
   <% end %>
+
+</fieldset>
+
+          </div>			
+				
+				
+
+	    </div>
+            <!-- end of content -->
+            <div id="content_bottom"></div>
+            <div class="cleaner"></div>
+          </div>
+          <!-- end of content_outer -->
+          <div class="cleaner"></div>
 </div>
+
+<script >
+function daysInMonth(month,year) {
+var dd = new Date(year, month, 0);
+return dd.getDate();}
+function setDayDrop(dyear, dmonth, dday) {
+var year = dyear.options[dyear.selectedIndex].value;
+var month = dmonth.options[dmonth.selectedIndex].value;
+var day = dday.options[dday.selectedIndex].value;
+if (day == ' ') {
+var days = (year == ' ' || month == ' ')
+    ? 31 : daysInMonth(month,year);
+dday.options.length = 0;
+dday.options[dday.options.length] = new Option(' ',' ');
+for (var i = 1; i <= days; i++)
+dday.options[dday.options.length] = new Option(i,i);}}
+
+function setDay() {
+var year = document.getElementById('year');
+var month = document.getElementById('month');
+var day = document.getElementById('day');
+setDayDrop(year,month,day);}
+document.getElementById('year').onchange = setDay;
+document.getElementById('month').onchange = setDay;</script>
