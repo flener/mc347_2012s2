@@ -146,7 +146,6 @@ class ClientsController < ApplicationController
       @client.ativo = true
       @client.save
 
-      redirect_to :action => 'indexEx' and return false
     else
       @client.ativo = false
       @client.save
