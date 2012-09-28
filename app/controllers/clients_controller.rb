@@ -55,7 +55,7 @@ class ClientsController < ApplicationController
     query+= add_item "trabalho_cargo_id", @client.trabalho_cargo_id.to_s
     query+= add_item "trabalho_renda_id", @client.trabalho_renda_id.to_s
     
-    @clients = Client.where(query).sorted(params[:sort], :cpf).page(params[:page])
+    @clients = Client.where(query).sorted(params[:sort], :cpf)
   end
   
   # GET /clients
