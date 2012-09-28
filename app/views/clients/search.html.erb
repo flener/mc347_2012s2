@@ -40,10 +40,6 @@
     <%= f.number_field :quantidade_filhos %>
   </div>
   <div class="field">
-    <%= f.label "Código de Endereco" %><br />
-    <%= f.number_field :endereco_id %>
-  </div>
-  <div class="field">
     <%= f.label "Religiao" %><br />
     <%= f.collection_select(:religiao_id, Religiao.all, :id, :nome, {:include_blank => true}) %>
   </div>

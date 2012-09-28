@@ -54,6 +54,7 @@ Mc437::Application.routes.draw do
 
   get "/search" => "clients#search"
   post "/searchResult" => "clients#searchResult"
+  get "/searchResult" => "clients#searchResult"
 
   get "/quemsomos" => "home#quemsomos"
   
