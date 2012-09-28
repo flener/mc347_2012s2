@@ -1,5 +1,7 @@
 class ClientsController < ApplicationController
   
+  before_filter :authenticate_operador!
+
   def search
     @client = Client.new
 
