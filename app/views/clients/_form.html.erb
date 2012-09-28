@@ -98,6 +98,14 @@
   </div>
   <% end %>
 
+    <%= link_to 'Show', @client %> |
+    
+    <% if @client.ativo == 1 %>
+        <%= link_to 'Back', clients_path %>
+    <% else %>
+        <%= link_to 'Back', clientesExcluidos_path %>
+    <% end %>
+
 </fieldset>
 
           </div>			
