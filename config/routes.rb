@@ -54,6 +54,8 @@ Mc437::Application.routes.draw do
 
   get "/search" => "clients#search"
   post "/searchResult" => "clients#searchResult"
+
+  get "/quemsomos" => "home#quemsomos"
   
   
   # The priority is based upon order of creation:
