@@ -67,23 +67,23 @@
   </div>
   <div class="field">
     <%= f.label "Religiao" %><br />
-    <%= f.collection_select(:religiao_id, Religiao.all, :id, :nome, {:selected => 5}) %>
+    <%= f.collection_select(:religiao_id, Religiao.all, :id, :nome) %>
   </div>
   <div class="field">
     <%= f.label "Hobby" %><br />
-    <%= f.collection_select(:hobby_id, Hobby.all, :id, :nome, {:selected => 5}) %>
+    <%= f.collection_select(:hobby_id, Hobby.all, :id, :nome) %>
   </div>
   <div class="field">
     <%= f.label "Área de Trabalho" %><br />
-    <%= f.collection_select(:trabalho_area_id, TrabalhoArea.all, :id, :area, {:selected => 3}) %>
+    <%= f.collection_select(:trabalho_area_id, TrabalhoArea.all, :id, :area) %>
   </div>
   <div class="field">
     <%= f.label "Cargo Atual" %><br />
-    <%= f.collection_select(:trabalho_cargo_id, TrabalhoCargo.all, :id, :cargo, {:selected => 9}) %>
+    <%= f.collection_select(:trabalho_cargo_id, TrabalhoCargo.all, :id, :cargo) %>
   </div>
   <div class="field">
     <%= f.label "Renda Mensal" %><br />
-    <%= f.collection_select(:trabalho_renda_id, TrabalhoRenda.all, :id, :renda, {:selected => 7}) %>
+    <%= f.collection_select(:trabalho_renda_id, TrabalhoRenda.all, :id, :renda) %>
   </div>
   <div class="field">
     <%= f.label "Código de Estado Civil" %><br />
