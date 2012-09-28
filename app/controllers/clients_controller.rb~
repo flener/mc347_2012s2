@@ -143,13 +143,13 @@ class ClientsController < ApplicationController
   # DELETE /clients/1.json
   def destroy
     @client = Client.find(params[:id])
-    if @client.ativo == false
-      @client.ativo = true
+    if @client.ativo == 0
+      @client.ativo = 1
       @client.save
 
       redirect_to :action => 'indexEx' and return false
     else
-      @client.ativo = false
+      @client.ativo = 0
       @client.save
     end
     
