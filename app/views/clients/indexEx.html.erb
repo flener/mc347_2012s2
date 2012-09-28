@@ -12,14 +12,14 @@
 
     <table class="tabela" cellpadding="2" cellspacing="1">
       <tr>
-        <th><%= "CPF" %></th>
-        <th><%= "Nome" %></th>
-        <th><%= "RG" %></th>
-        <th><%= "Nome do Pai" %></th>
-        <th><%= "Nome da Mãe" %></th>
-        <th><%= "Data de Nascimento" %></th>
-        <th><%= "Local de nascimento" %></th>
-        <th><%= "Quantidade de filhos" %></th>
+        <th><%= link_to_sorted "CPF", :cpf %></th>
+        <th><%= link_to_sorted "Nome", :nome %></th>
+        <th><%= link_to_sorted "RG", :rg %></th>
+        <th><%= link_to_sorted "Nome do Pai", :nome_pai %></th>
+        <th><%= link_to_sorted "Nome da Mãe", :nome_mae %></th>
+        <th><%= link_to_sorted "Data de Nascimento", :data_nascimento%> </th>
+        <th><%= link_to_sorted "Local de nascimento", :local_nascimento%></th>
+        <th><%= link_to_sorted "Quantidade de filhos", :quantidade_filhos%></th>
         <th>Editar</th>>
         <th>Restaurar</th>>
       </tr>

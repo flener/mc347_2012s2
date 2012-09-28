@@ -62,7 +62,7 @@ class ClientsController < ApplicationController
   # GET /clients
   # GET /clients.json
   def index
-    @clients = @clients = Client.where("(ativo) = 1").page(params[:page])
+    @clients = @clients = Client.where("(ativo) = 1").sorted(params[:sort], :cpf).page(params[:page])
 
     respond_to do |format|
       format.html # index.html.erb
