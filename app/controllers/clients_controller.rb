@@ -180,6 +180,13 @@ class ClientsController < ApplicationController
   def relatorios
   end
 
+  def restore
+    @client = Client.find(params[:id])
+    @client.ativo = 1
+    @client.save
+    redirect_to clientesExcluidos_path
+  end
+
   def cliente_pleno
     @clients = Client.where("(ativo) = 1")
 
