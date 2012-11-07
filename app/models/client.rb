@@ -3,7 +3,7 @@
 class Client < ActiveRecord::Base
   attr_accessible :cpf, :data_nascimento, :email, :endereco, :estado_civil_id, :hobby_id, 
   :local_nascimento, :nome, :nome_mae, :nome_pai, :observacoes, :quantidade_filhos, :religiao_id, 
-  :rg, :telefone, :trabalho_area_id, :trabalho_cargo_id, :trabalho_renda_id, :ativo
+  :rg, :telefone, :trabalho_area_id, :trabalho_cargo_id, :trabalho_renda_id, :ativo, :cep, :numero
 
 
   belongs_to :estado_civil
