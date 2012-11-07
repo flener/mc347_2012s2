@@ -1,6 +1,6 @@
 Mc437::Application.routes.draw do
 
-
+  get "/tudo/:id" => "rests#tudo"
   get "/existe/:id" => "rests#existe"
   get "/cep/:id" => "rests#cep"
 

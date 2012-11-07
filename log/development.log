@@ -475,3 +475,26 @@ LINE 4:              WHERE a.attrelid = '"admins"'::regclass
                AND a.attnum > 0 AND NOT a.attisdropped
              ORDER BY a.attnum
 
+Connecting to database specified by database.yml
+
+
+Started GET "/tudo/1.json" for 127.0.0.1 at Wed Nov 07 02:01:20 -0200 2012
+Processing by RestsController#tudo as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mClient Load (173.4ms)[0m  [1mSELECT "clients".* FROM "clients" WHERE "clients"."cpf" = '1' LIMIT 1[0m
+Completed 200 OK in 1408ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/tudo/40995817804.json" for 127.0.0.1 at Wed Nov 07 02:01:52 -0200 2012
+Processing by RestsController#tudo as JSON
+  Parameters: {"id"=>"40995817804"}
+  [1m[35mClient Load (166.7ms)[0m  SELECT "clients".* FROM "clients" WHERE "clients"."cpf" = '40995817804' LIMIT 1
+Completed 200 OK in 200ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tudo/40995817804.xml" for 127.0.0.1 at Wed Nov 07 02:01:57 -0200 2012
+Processing by RestsController#tudo as XML
+  Parameters: {"id"=>"40995817804"}
+  [1m[36mClient Load (172.2ms)[0m  [1mSELECT "clients".* FROM "clients" WHERE "clients"."cpf" = '40995817804' LIMIT 1[0m
+Completed 200 OK in 205ms (Views: 27.4ms | ActiveRecord: 0.0ms)

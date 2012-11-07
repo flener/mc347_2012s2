@@ -23,4 +23,9 @@ class RestsController < ApplicationController
     end
     respond_with @clienteEndereco
   end
+
+  def tudo
+    @client = Client.find_by_cpf(params[:id])
+    respond_with @client    
+  end
 end
