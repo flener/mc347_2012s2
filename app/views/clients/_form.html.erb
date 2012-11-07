@@ -58,11 +58,15 @@
   </div>
   <div class="field">
     <%= f.label "Quantidade de Filhos" %><br />
-    <%= f.number_field :quantidade_filhos %>
+    <%= f.text_field :quantidade_filhos %>
   </div>
   <div class="field">
-    <%= f.label "Código de Endereco" %><br />
-    <%= f.number_field :endereco_id %>
+    <%= f.label "CEP" %><br />
+    <%= f.text_field :cep %>
+  </div>
+  <div class="field">
+    <%= f.label "Número" %><br />
+    <%= f.text_field :numero %>
   </div>
   <div class="field">
     <%= f.label "Religiao" %><br />
